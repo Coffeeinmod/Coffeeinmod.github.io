@@ -241,10 +241,10 @@ const GALLERIES = {
   dis: [
     ["images/dis-banner.png", "Coffeein Dismemberment"],
     ["images/dis-pack.png", "ASI + Nightly + DLC"],
-    ["images/dis-gta5mods.jpg", "GTA5-Mods preview"],
+    ["images/dis-gta5mods-hi.jpg", "GTA5-Mods preview"],
     ["images/dis-yt1.jpg", "Showcase 1"],
     ["images/dis-yt2.jpg", "Showcase 2"],
-    ["images/dis-vid-St40BR86vy4.jpg", "Gore models video"]
+    ["images/dis-vid-qgHKAHhLhKU.jpg", "Showcase 3"]
   ],
   mod: [
     ["images/gta.png", "GTA / Coffeein"],
