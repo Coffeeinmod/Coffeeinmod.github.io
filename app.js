@@ -238,6 +238,12 @@ const C = {
 };
 
 const GALLERIES = {
+  dis: [
+    ["images/dis-banner.png", "Coffeein Dismemberment"],
+    ["images/dis-pack.png", "ASI + Nightly + DLC"],
+    ["images/dis-gta5mods.jpg", "GTA5-Mods preview"],
+    ["images/dis-yt1.jpg", "Showcase"]
+  ],
   mod: [
     ["images/gta.png", "GTA / Coffeein"],
     ["images/hero.jpg", "Éjszakai hangulat"],
@@ -288,8 +294,9 @@ function paint() {
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
   ).join("");
   $("#studio-chips").innerHTML = t["studio.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
-  const shot = (src, alt, i) =>
+    const shot = (src, alt, i) =>
     `<figure class="shot glass${i === 0 ? ' shot-hero' : ''}"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`;
+  $("#dis-gallery").innerHTML = GALLERIES.dis.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#studio-gallery").innerHTML = GALLERIES.studio.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#tok-gallery").innerHTML = GALLERIES.tok.map(([src, alt], i) => shot(src, alt, i)).join("");
