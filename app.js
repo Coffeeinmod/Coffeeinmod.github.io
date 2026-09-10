@@ -80,33 +80,30 @@ const C = {
       "queue-status","stats","youtube-music","tiktokobs-widgets"
     ],
     
-    "dis.kicker": "Új pack", "dis.title": "Dismemberment",
-    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. ASI + script + DLC. Nightly SHVDN-nel működik.",
-    "dis.tag": "ASI + Nightly", "dis.name": "Mi van a zipben",
-    "dis.body": "Tuned Dismemberment: DismembermentASI.asi, SHVDN script, fegyverlista, DLC .rpf, SHVDN Nightly-val (asi + dll). A stable v3.6.0 helyett Nightly kell.",
+    "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
+    "dis.lead": "GTA 5 singleplayer gore / dismemberment — csak a futtatáshoz kellő fájlok (nem a teljes projekt).",
+    "dis.tag": "ASI runtime", "dis.name": "Mi van a zipben",
+    "dis.body": "Runtime pack: tuned ASI, SHVDN script + cfg, DLC .rpf, és SHVDN Nightly (asi + dll). Forráskód / solution nincs benne. Script Hook V (Blade) külön kell.",
     "dis.bullets": [
-      "DismembermentASI.asi",
-      "scripts/Dismemberment.dll + cfg/toml",
+      "DismembermentASI.asi (tuned multi)",
+      "scripts/Dismemberment.dll + toml/cfg",
       "mods/.../dismemberment/dlc.rpf",
-      "SHVDN Nightly kell (asi + DotNet3.dll)",
-      "Script Hook V (Blade) külön"
+      "SHVDN Nightly runtime (asi + dll + ini)",
+      "Nincs forráskód / .sln / Build"
     ],
-    "dis.download": "",
-    "dis.hint": "Csak leírás a site-on. Szükséges: Script Hook V + SHVDN Nightly (linkek lent).",
+    "dis.download": "Runtime zip letöltése",
+    "dis.hint": "Script Hook V (Blade) külön: dev-c.com. OpenIV: dlclist.xml-be tedd be a dismemberment DLC-t.",
     "dis.req.tag": "Setup", "dis.req.title": "Szükséges",
     "dis.reqs": [
       "Script Hook V (Alexander Blade) — GTA gyökér",
-      "ScriptHookVDotNet Nightly",
       "GTA 5 Legacy story mode",
       "OpenIV mods folder ajánlott"
     ],
     "dis.steps.kicker": "Telepítés",
     "dis.steps": [
       "Script Hook V a GTA V gyökérbe",
-      "Nightly fájlok (ScriptHookVDotNet.asi + DotNet3.dll) a gyökérbe",
-      "DismembermentASI.asi a gyökérbe",
-      "scripts\ → GTA V\\scripts\\",
-      "mods\ a GTA V gyökérbe",
+      "Zip tartalmát másold a GTA V gyökérbe",
+      "OpenIV: dlclist.xml → dlcpacks:\\dismemberment\\",
       "Story mode indítás"
     ],
     "soon.kicker": "Release", "soon.title": "Letöltés később",
@@ -198,33 +195,30 @@ const C = {
       "queue-status","stats","youtube-music","tiktokobs-widgets"
     ],
     
-    "dis.kicker": "New pack", "dis.title": "Dismemberment",
-    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. Works with SHVDN Nightly.",
-    "dis.tag": "ASI + Nightly", "dis.name": "What's in the zip",
-    "dis.body": "Tuned Dismemberment: ASI, SHVDN script, weapon list, DLC .rpf, with ScriptHookVDotNet Nightly (asi + dll). Use Nightly, not stable v3.6.0.",
+    "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
+    "dis.lead": "GTA 5 singleplayer gore / dismemberment — runtime files only (not the full project).",
+    "dis.tag": "ASI runtime", "dis.name": "What's in the zip",
+    "dis.body": "Runtime pack: tuned ASI, SHVDN script + cfg, DLC .rpf, and SHVDN Nightly (asi + dll). No source / solution. Script Hook V (Blade) is separate.",
     "dis.bullets": [
-      "DismembermentASI.asi",
-      "scripts/Dismemberment.dll + cfg/toml",
+      "DismembermentASI.asi (tuned multi)",
+      "scripts/Dismemberment.dll + toml/cfg",
       "mods/.../dismemberment/dlc.rpf",
-      "Needs SHVDN Nightly (asi + DotNet3.dll)",
-      "Script Hook V (Blade) separately"
+      "SHVDN Nightly runtime (asi + dll + ini)",
+      "No source / .sln / Build"
     ],
-    "dis.download": "",
-    "dis.hint": "Description only on the site. Requires Script Hook V + SHVDN Nightly (links below).",
+    "dis.download": "Download runtime zip",
+    "dis.hint": "Script Hook V (Blade) separate: dev-c.com. OpenIV: add dismemberment to dlclist.xml.",
     "dis.req.tag": "Setup", "dis.req.title": "Requirements",
     "dis.reqs": [
       "Script Hook V (Alexander Blade) — GTA root",
-      "ScriptHookVDotNet Nightly",
       "GTA 5 Legacy story mode",
       "OpenIV mods folder recommended"
     ],
     "dis.steps.kicker": "Install",
     "dis.steps": [
       "Script Hook V into GTA V root",
-      "Nightly files (ScriptHookVDotNet.asi + DotNet3.dll) into root",
-      "DismembermentASI.asi into root",
-      "scripts\ → GTA V\\scripts\\",
-      "mods\ into GTA V root",
+      "Copy zip contents into GTA V root",
+      "OpenIV: dlclist.xml → add dlcpacks:\\dismemberment\\",
       "Launch story mode"
     ],
     "soon.kicker": "Release", "soon.title": "Downloads later",
