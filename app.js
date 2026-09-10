@@ -179,24 +179,22 @@ const C = {
 
 const GALLERIES = {
   mod: [
-    ["images/gta.png", "GTA / Coffeein világ"],
+    ["images/gta.png", "GTA / Coffeein"],
     ["images/hero.jpg", "Éjszakai hangulat"],
-    ["images/shot-section-mods.png", "Mod szekció"],
-    ["images/espresso.jpg", "Brand"]
-  ],
-  studio: [
-    ["images/overlay.png", "Overlay"],
-    ["images/wheel.png", "Kerék / Wheel"],
-    ["images/coffeeintok.png", "CoffeeinTok"],
-    ["images/tomato.png", "Live brand"],
-    ["images/shot-app-builder-preview.png", "Studio UI"]
+    ["images/espresso.jpg", "Brand"],
+    ["images/coffeein.jpg", "Coffeein"]
   ],
   tok: [
     ["images/coffeeintok.png", "CoffeeinTok"],
     ["images/overlay.png", "Overlay"],
     ["images/wheel.png", "Kerék"],
-    ["images/tomato.png", "Live branding"],
-    ["images/shot-app-builder-preview.png", "UI preview"]
+    ["images/coffee.png", "Brand"]
+  ],
+  studio: [
+    ["images/overlay.png", "Overlay"],
+    ["images/wheel.png", "Kerék"],
+    ["images/coffeeintok.png", "CoffeeinTok"],
+    ["images/gta.jpg", "GTA live"]
   ]
 };
 
