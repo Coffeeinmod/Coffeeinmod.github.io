@@ -185,16 +185,16 @@ const GALLERIES = {
     ["images/coffeein.jpg", "Coffeein"]
   ],
   tok: [
-    ["images/coffeeintok-studio.png", "Interakciók / overlay admin"],
-    ["images/coffeeintok.png", "CoffeeinTok"],
-    ["images/overlay.png", "Overlay"],
-    ["images/wheel.png", "Kerék"]
+    ["images/ov-ugurtas.png", "Gift alert"],
+    ["images/ov-tiktokobs.png", "TikTokOBS"],
+    ["images/ov-topgifters.png", "Top támogatók"],
+    ["images/coffeeintok-studio.png", "Admin"]
   ],
   studio: [
-    ["images/coffeeintok-studio.png", "Live Studio admin"],
-    ["images/overlay.png", "Overlay"],
-    ["images/wheel.png", "Kerék"],
-    ["images/coffeeintok.png", "CoffeeinTok"]
+    ["images/ov-ugurtas.png", "Ugur Tas Alert"],
+    ["images/ov-tiktokobs.png", "TikTokOBS Widget"],
+    ["images/ov-topgifters.png", "Top Támogatók"],
+    ["images/coffeeintok-studio.png", "Studio admin"]
   ]
 };
 
