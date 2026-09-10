@@ -225,16 +225,11 @@ function paint() {
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
   ).join("");
   $("#studio-chips").innerHTML = t["studio.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
-  $("#studio-gallery").innerHTML = GALLERIES.studio.map(([src, alt]) =>
-    `<figure class="shot glass"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`
-  ).join("");
-
-  $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt]) =>
-    `<figure class="shot glass"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`
-  ).join("");
-  $("#tok-gallery").innerHTML = GALLERIES.tok.map(([src, alt]) =>
-    `<figure class="shot glass"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`
-  ).join("");
+  const shot = (src, alt, i) =>
+    `<figure class="shot glass${i === 0 ? ' shot-hero' : ''}"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`;
+  $("#studio-gallery").innerHTML = GALLERIES.studio.map(([src, alt], i) => shot(src, alt, i)).join("");
+  $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt], i) => shot(src, alt, i)).join("");
+  $("#tok-gallery").innerHTML = GALLERIES.tok.map(([src, alt], i) => shot(src, alt, i)).join("");
 }
 
 $("#hu").onclick = () => { lang = "hu"; localStorage.setItem("coffeein-lang", lang); paint(); };
