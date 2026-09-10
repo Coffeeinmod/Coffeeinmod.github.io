@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=fix5" />
+  <link rel="stylesheet" href="style.css?v=fix6" />
 </head>
 <body>
   <div class="grain"></div>
@@ -27,6 +27,7 @@
       <a href="#effects" data-i="nav.effects"></a>
       <a href="#tok" data-i="nav.tok"></a>
       <a href="#studio" data-i="nav.studio"></a>
+      <a href="#dismember" data-i="nav.dismember"></a>
       <a href="#community" data-i="nav.community"></a>
     </nav>
     <div class="lang">
@@ -39,6 +40,7 @@
     <a href="#effects" data-i="nav.effects"></a>
     <a href="#tok" data-i="nav.tok"></a>
     <a href="#studio" data-i="nav.studio"></a>
+      <a href="#dismember" data-i="nav.dismember"></a>
     <a href="#community" data-i="nav.community"></a>
   </div>
 
@@ -127,6 +129,34 @@
       </div>
     </section>
 
+    
+    <section id="dismember">
+      <div class="wrap">
+        <p class="kicker" data-i="dis.kicker"></p>
+        <h2 class="display" data-i="dis.title"></h2>
+        <p class="muted" data-i="dis.lead"></p>
+        <div class="grid-2 feature-split">
+          <article class="glass pad">
+            <span class="tag" data-i="dis.tag"></span>
+            <h3 class="display" data-i="dis.name"></h3>
+            <p data-i="dis.body"></p>
+            <ul class="bullets" id="dis-bullets"></ul>
+            <div class="row" style="margin-top:1.2rem">
+              <a class="btn btn-primary" id="dis-dl" href="https://github.com/Coffeeinmod/Coffeeinmod.github.io/releases/download/dismemberment-tuned/CoffeeinMod-Dismemberment.zip" data-i="dis.download"></a>
+            </div>
+            <p class="hint" style="margin-top:0.7rem;color:var(--subtle);font-size:0.85rem" data-i="dis.hint"></p>
+          </article>
+          <article class="glass pad">
+            <span class="tag" data-i="dis.req.tag"></span>
+            <h3 class="display" data-i="dis.req.title"></h3>
+            <ul class="bullets" id="dis-reqs"></ul>
+            <p class="kicker" style="margin-top:1.4rem" data-i="dis.steps.kicker"></p>
+            <ol class="bullets" id="dis-steps" style="list-style:decimal;padding-left:1.3rem"></ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="soon">
       <div class="wrap">
         <div class="glass cta-block">
@@ -163,6 +193,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=fix5"></script>
+  <script src="app.js?v=fix6"></script>
 </body>
 </html>
