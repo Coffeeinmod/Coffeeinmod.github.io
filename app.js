@@ -185,16 +185,16 @@ const GALLERIES = {
     ["images/coffeein.jpg", "Coffeein"]
   ],
   tok: [
+    ["images/coffeeintok-studio.png", "Interakciók / overlay admin"],
     ["images/coffeeintok.png", "CoffeeinTok"],
     ["images/overlay.png", "Overlay"],
-    ["images/wheel.png", "Kerék"],
-    ["images/coffee.png", "Brand"]
+    ["images/wheel.png", "Kerék"]
   ],
   studio: [
+    ["images/coffeeintok-studio.png", "Live Studio admin"],
     ["images/overlay.png", "Overlay"],
     ["images/wheel.png", "Kerék"],
-    ["images/coffeeintok.png", "CoffeeinTok"],
-    ["images/gta.jpg", "GTA live"]
+    ["images/coffeeintok.png", "CoffeeinTok"]
   ]
 };
 
