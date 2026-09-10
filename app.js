@@ -1,6 +1,6 @@
 const C = {
   hu: {
-    "nav.mod": "Coffeein Mod", "nav.effects": "Effektek", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.community": "Közösség",
+    "nav.mod": "Coffeein Mod", "nav.effects": "Effektek", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Közösség",
     "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
     "hero.lead": "A nézők élőben belenyúlnak Los Santosba. Coffeein Mod a káosz a játékban — CoffeeinTok a híd a TikTok Live és a GTA között.",
     "hero.cta": "Nézd meg a modokat", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -79,6 +79,36 @@ const C = {
       "overlay_legend","topgifters","toplikers","chat","ai-response","action-status",
       "queue-status","stats","youtube-music","tiktokobs-widgets"
     ],
+    
+    "dis.kicker": "Új pack", "dis.title": "Dismemberment",
+    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. ASI + SHVDN script + DLC modellek. A Script Hook V-t külön kell feltenni.",
+    "dis.tag": "ASI + SHVDN", "dis.name": "Mi van a zipben",
+    "dis.body": "A pack a tuned Dismemberment build: DismembermentASI.asi, a C# script a scripts mappába, fegyverlista, dismemberment DLC (.rpf), és ScriptHookVDotNet3.dll.",
+    "dis.bullets": [
+      "DismembermentASI.asi — ScriptHookV ASI plugin",
+      "scripts/Dismemberment.dll — SHVDN v3 script",
+      "DismembermentWeapons.cfg + Dismemberment.toml",
+      "mods/.../dismemberment/dlc.rpf — gore modellek",
+      "ScriptHookVDotNet3.dll a gyökérbe"
+    ],
+    "dis.download": "Zip letöltése",
+    "dis.hint": "ScriptHookV.asi nincs a zipben — hivatalos Script Hook V kell a játékverziódhoz.",
+    "dis.req.tag": "Setup", "dis.req.title": "Szükséges",
+    "dis.reqs": [
+      "Script Hook V (Alexander Blade) — GTA gyökér",
+      "ScriptHookVDotNet3 (a zipben)",
+      "GTA 5 Legacy singleplayer / story mode",
+      "OpenIV mods folder ajánlott a DLC-hez"
+    ],
+    "dis.steps.kicker": "Telepítés",
+    "dis.steps": [
+      "Script Hook V a GTA V gyökérbe",
+      "ScriptHookVDotNet3.dll a gyökérbe",
+      "DismembermentASI.asi a gyökérbe",
+      "scripts\ tartalom → GTA V\\scripts\\",
+      "mods\ mappa a GTA V gyökérbe",
+      "Story mode indítás"
+    ],
     "soon.kicker": "Release", "soon.title": "Letöltés később",
     "soon.body": "Most a leírás és a hangulat van kint. A telepítők és packok linkjei később kerülnek ide — addig Discordon a sneak peek.",
 
@@ -88,7 +118,7 @@ const C = {
     "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
   },
   en: {
-    "nav.mod": "Coffeein Mod", "nav.effects": "Effects", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.community": "Community",
+    "nav.mod": "Coffeein Mod", "nav.effects": "Effects", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Community",
     "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
     "hero.lead": "Viewers reach into Los Santos live. Coffeein Mod is the chaos in-game — CoffeeinTok is the bridge from TikTok Live to GTA.",
     "hero.cta": "See the mods", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -167,6 +197,36 @@ const C = {
       "overlay_legend","topgifters","toplikers","chat","ai-response","action-status",
       "queue-status","stats","youtube-music","tiktokobs-widgets"
     ],
+    
+    "dis.kicker": "New pack", "dis.title": "Dismemberment",
+    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. ASI + SHVDN script + DLC models. Script Hook V must be installed separately.",
+    "dis.tag": "ASI + SHVDN", "dis.name": "What's in the zip",
+    "dis.body": "Tuned Dismemberment build: DismembermentASI.asi, the C# script for scripts/, weapon list, dismemberment DLC (.rpf), and ScriptHookVDotNet3.dll.",
+    "dis.bullets": [
+      "DismembermentASI.asi — ScriptHookV ASI plugin",
+      "scripts/Dismemberment.dll — SHVDN v3 script",
+      "DismembermentWeapons.cfg + Dismemberment.toml",
+      "mods/.../dismemberment/dlc.rpf — gore models",
+      "ScriptHookVDotNet3.dll for the game root"
+    ],
+    "dis.download": "Download zip",
+    "dis.hint": "ScriptHookV.asi is not in the zip — get official Script Hook V for your game build.",
+    "dis.req.tag": "Setup", "dis.req.title": "Requirements",
+    "dis.reqs": [
+      "Script Hook V (Alexander Blade) — GTA root",
+      "ScriptHookVDotNet3 (included in the zip)",
+      "GTA 5 Legacy singleplayer / story mode",
+      "OpenIV mods folder recommended for the DLC"
+    ],
+    "dis.steps.kicker": "Install",
+    "dis.steps": [
+      "Script Hook V into GTA V root",
+      "ScriptHookVDotNet3.dll into root",
+      "DismembermentASI.asi into root",
+      "scripts\ contents → GTA V\\scripts\\",
+      "mods\ folder into GTA V root",
+      "Launch story mode"
+    ],
     "soon.kicker": "Release", "soon.title": "Downloads later",
     "soon.body": "Descriptions and vibe are live now. Installers and packs will land here later — Discord for sneak peeks until then.",
 
@@ -220,7 +280,10 @@ function paint() {
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
   ).join("");
 
-  $("#studio-bullets").innerHTML = t["studio.bullets"].map((b) => `<li>${b}</li>`).join("");
+  $("#dis-bullets").innerHTML = t["dis.bullets"].map((b) => `<li>${b}</li>`).join("");
+  $("#dis-reqs").innerHTML = t["dis.reqs"].map((b) => `<li>${b}</li>`).join("");
+  $("#dis-steps").innerHTML = t["dis.steps"].map((b) => `<li>${b}</li>`).join("");
+    $("#studio-bullets").innerHTML = t["studio.bullets"].map((b) => `<li>${b}</li>`).join("");
   $("#studio-overlays").innerHTML = t["studio.overlays"].map(([title, body]) =>
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
   ).join("");
