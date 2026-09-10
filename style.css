@@ -171,3 +171,9 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
   .shot img { height: 11rem; }
   h1 { font-size: clamp(3.2rem, 18vw, 4.8rem); }
 }
+
+.gallery .shot:first-child { grid-column: 1 / -1; }
+.gallery .shot:first-child img { height: 14rem; object-fit: cover; object-position: top left; }
+@media (max-width: 520px) {
+  .gallery .shot:first-child img { height: 11rem; }
+}
