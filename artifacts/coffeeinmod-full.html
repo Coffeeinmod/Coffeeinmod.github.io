@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CoffeeinMod</title>
+<meta name="theme-color" content="#070604">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070604;--fg:#f6efe4;--m:#b7a894;--s:#7d6f5d;--p:#ff6a00;--a:#ffc14a;--g:rgb(12 9 6/.55)}
+*{box-sizing:border-box;margin:0}html{color-scheme:dark;scroll-behavior:smooth}
+body{font-family:Manrope,sans-serif;background:var(--bg);color:var(--fg);min-height:100dvh}
+.d{font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.04em}
+.k{font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--a)}
+.g{background:var(--g);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 0 0 1px rgb(255 196 110/.16),0 0 28px rgb(255 106 0/.08);border-radius:1.25rem}
+.n{color:var(--p);text-shadow:0 0 18px rgb(255 106 0/.55)}
+a{color:inherit;text-decoration:none}
+.w{width:min(72rem,calc(100% - 2.5rem));margin-inline:auto}
+nav.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1.1rem;margin:.75rem auto 0;width:min(72rem,calc(100% - 1.5rem))}
+.links{display:flex;gap:1.1rem;font-size:.9rem;color:var(--m)}
+.lang button,.btn{font:inherit;cursor:pointer;border:0;color:var(--fg);border-radius:999px;padding:.55rem 1rem}
+.lang button{background:0;color:var(--s)}.lang button.on{color:var(--a)}
+.bp{background:var(--p);color:#140a00;font-weight:700;box-shadow:0 0 18px rgb(255 106 0/.4)}
+.bg{background:var(--g);box-shadow:0 0 0 1px rgb(255 196 110/.2)}
+.bo{background:0;box-shadow:0 0 0 1px rgb(255 196 110/.28)}
+.hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden}
+.hb{position:absolute;inset:0;background:radial-gradient(80% 60% at 70% 20%,rgb(255 106 0/.28),transparent 55%),linear-gradient(180deg,rgb(7 6 4/.2),var(--bg) 92%),#0c0906}
+.hero .w{position:relative;z-index:1;padding:7rem 0 4.5rem}
+h1{font-size:clamp(4rem,16vw,9.5rem);line-height:.82}
+.lead{max-width:36rem;margin-top:1.25rem;color:var(--m);line-height:1.6}
+.row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
+section{padding:5.5rem 0}h2{font-size:clamp(2.4rem,6vw,3.6rem);margin-top:.5rem}
+.mu{color:var(--m);margin-top:.9rem;max-width:40rem;line-height:1.6}
+.g2,.g3{display:grid;gap:1rem;margin-top:2rem}
+@media(min-width:800px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}.links{display:flex}}
+.cap{height:13rem;border-radius:1.25rem 1.25rem 0 0;background:linear-gradient(145deg,#2a1608,#0b0907 55%,rgb(255 106 0/.35))}
+.gta{background:linear-gradient(160deg,#1a120c,#0a0806 50%,rgb(255 193 74/.22))}
+.pad{padding:1.5rem}h3{font-size:2rem;margin-top:.35rem}
+.tag{font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--p)}
+.feat,.step{padding:1.35rem 1.4rem}.feat p,.step p,article p{color:var(--m);font-size:.92rem;line-height:1.6;margin-top:.5rem}
+.step{display:flex;gap:1rem;margin-top:.7rem}.nn{font-family:"Bebas Neue",Impact,sans-serif;font-size:2rem;color:var(--p)}
+.warn{margin-top:1.2rem;color:var(--a);font-size:.9rem}.cta{padding:2.2rem}.hint{color:var(--s);font-size:.85rem;margin-top:.7rem}
+footer{padding:2.5rem 0 3.5rem;color:var(--s);font-size:.82rem}
+.toast{position:fixed;left:50%;bottom:1.4rem;transform:translateX(-50%) translateY(20px);opacity:0;padding:.85rem 1.1rem;max-width:min(28rem,92vw);transition:.35s;z-index:50;font-size:.9rem;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:760px){.links{display:none}}
+</style></head><body>
+<nav class="top g"><a href="#top" class="d" style="font-size:1.2rem">CoffeeinMod</a>
+<div class="links"><a href="#mods" data-i="nm"></a><a href="#install" data-i="ni"></a><a href="#download" data-i="nd"></a><a href="#community" data-i="nc"></a></div>
+<div class="lang"><button type="button" id="hu" class="on">HU</button><button type="button" id="en">EN</button></div></nav>
+<main id="top">
+<section class="hero"><div class="hb"></div><div class="w"><p class="k" data-i="hk"></p>
+<h1 class="d">COFFEEIN<span class="n">MOD</span></h1><p class="lead" data-i="hl"></p>
+<div class="row"><button class="btn bp" id="dl" data-i="hc"></button>
+<a class="btn bg" href="https://discord.gg/BYpNKz6KP" target="_blank" rel="noreferrer">Discord</a>
+<a class="btn bo" href="https://www.youtube.com/@c0ffeein" target="_blank" rel="noreferrer">YouTube</a></div></div></section>
+<section id="mods"><div class="w"><p class="k" data-i="mk"></p><h2 class="d" data-i="mt"></h2><p class="mu" data-i="ml"></p>
+<div class="g2">
+<article class="g"><div class="cap"></div><div class="pad"><span class="tag" data-i="ct"></span><h3 class="d" data-i="cn"></h3><p data-i="cb"></p></div></article>
+<article class="g"><div class="cap gta"></div><div class="pad"><span class="tag" data-i="gt"></span><h3 class="d" data-i="gn"></h3><p data-i="gb"></p></div></article>
+</div>
+<p class="k" style="margin-top:4.5rem" data-i="fk"></p><h2 class="d" data-i="ft"></h2><div class="g3" id="features"></div>
+</div></section>
+<section id="install"><div class="w"><p class="k" data-i="ik"></p><h2 class="d" data-i="it"></h2><p class="mu" data-i="il"></p>
+<div id="steps"></div><p class="warn" data-i="ino"></p></div></section>
+<section id="download"><div class="w"><div class="g cta"><p class="k" data-i="dk"></p><h2 class="d" data-i="dt"></h2>
+<p class="mu" data-i="db"></p><div class="row"><button class="btn bp" id="dl2" data-i="dbn"></button></div>
+<p class="hint" data-i="dh"></p></div></div></section>
+<section id="community"><div class="w"><p class="k" data-i="ck"></p><h2 class="d" data-i="ctt"></h2><p class="mu" data-i="cbo"></p>
+<div class="g2">
+<a class="g feat" href="https://discord.gg/BYpNKz6KP" target="_blank" rel="noreferrer"><h3 class="d" data-i="cd"></h3><p>discord.gg/BYpNKz6KP</p></a>
+<a class="g feat" href="https://www.youtube.com/@c0ffeein" target="_blank" rel="noreferrer"><h3 class="d">YouTube</h3><p>@c0ffeein</p></a>
+</div></div></section>
+</main>
+<footer><div class="w"><p data-i="fo"></p><p style="margin-top:.6rem">© <span id="y"></span> CoffeeinMod</p></div></footer>
+<div class="toast g" id="toast"></div>
+<script>
+const T={hu:{nm:"Modok",ni:"Telepítés",nd:"Letöltés",nc:"Közösség",hk:"GTA 5 · PC · Singleplayer",
+hl:"Fekete éjszaka. Narancs neon. Los Santos, ahogy te akarod — egy kávé, és a város a tiéd.",
+hc:"Letöltés hamarosan",mk:"A két projekt",mt:"A modok",ml:"Egy márka. Két GTA 5 élmény. ScriptHook V, natív menü, tiszta konfig.",
+ct:"Zászlóshajó",cn:"Coffeein",cb:"A Coffeein a saját ScriptHook V scriptek. Nem felduzzasztott trainer — kompakt interakciós réteg natív, Rockstar-stílusú menüvel. Gyalog és járműben, .cfg-ből hangolható. Éjszaka, eső, neon.",
+gt:"GTA 5",gn:"GTA 5 Mod",gb:"A GTA 5 singleplayer projekt a Coffeein köré. Világ, menü, minőségi élet — nem generic cheatpack. Legacy és Enhanced. Los Santos sötétebb, gyorsabb.",
+fk:"Rendszer",ft:"Ami bent van",ik:"Setup",it:"Telepítés",il:"Négy lépés. Ha nem tölt, a ScriptHook a hibás — illeszd a játékbuildhez.",
+ino:"Csak singleplayer. Online-ban ne használd — ban.",dk:"Release",dt:"Letöltés",
+db:"A nyilvános build még nincs kint. A Discordon jön elsőnek — changelog, hotfix, sneak peek.",
+dbn:"Hamarosan",dh:"A link ide kerül, amint a pack kész.",ck:"Kapcsolat",ctt:"Discord és YouTube",
+cbo:"Build-ek, bugreport, sneak peek — Discord. Telepítés, showcase, update — YouTube.",
+cd:"Csatlakozás Discordra",fo:"Nem hivatalos fanprojekt. A Grand Theft Auto és a GTA a Take-Two / Rockstar védjegyei. 18+.",
+toast:"A letöltés még nincs kint. Csatlakozz Discordra, ott érkezik elsőnek.",
+feat:[["Natív menü","Rockstar draw — tiszta, gyors, NativeUI nélkül. J a menü, numpad a választás."],["ScriptHook V + .NET","Stabil script stack. Legacy és Enhanced, a megfelelő .NET builddel."],["Gyalog + jármű","Ugyanaz a rendszer az utcán és a kocsiban."],[".cfg, nem bloat","Hangok, viselkedés, billentyűk — konfigfájl."],["Moduláris","Nyílt szerkezet. Bővíthető, a mag kicsi marad."],["Éjszakai hangulat","Sötét Los Santos. Neon, eső, ritmus."]],
+st:[["01","Script Hook V","Telepítsd a hivatalos Script Hook V-t a GTA 5 gyökérmappába."],["02","ScriptHookV .NET","Legacy vagy Enhanced — a te buildedhez. Ne keverd."],["03","Scripts mappa","Másold a fájlokat ide: Grand Theft Auto V\\\\scripts\\\\"],["04","Menü: J","Story mode. J nyitja a menüt. A billentyű a .cfg-ben cserélhető."]]},
+en:{nm:"Mods",ni:"Install",nd:"Download",nc:"Community",hk:"GTA 5 · PC · Singleplayer",
+hl:"Black night. Amber neon. Los Santos the way you want it — one coffee, and the city is yours.",
+hc:"Download soon",mk:"The two projects",mt:"The mods",ml:"One brand. Two GTA 5 experiences. ScriptHook V, native menu, clean config.",
+ct:"Flagship",cn:"Coffeein",cb:"Coffeein is the ScriptHook V script. Not a bloated trainer — a compact interaction layer with a native, Rockstar-style menu. On foot and in vehicle, tuned from a .cfg. Night, rain, neon.",
+gt:"GTA 5",gn:"GTA 5 Mod",gb:"The GTA 5 singleplayer project around Coffeein. World, menu, quality of life — not a generic cheat pack. Legacy and Enhanced.",
+fk:"System",ft:"What's inside",ik:"Setup",it:"Install",il:"Four steps. If it does not load, ScriptHook is usually why — match it to your game build.",
+ino:"Singleplayer only. Do not use it online — ban.",dk:"Release",dt:"Download",
+db:"The public build is not out yet. Discord gets it first — changelog, hotfix, sneak peek.",
+dbn:"Coming soon",dh:"The link lands here as soon as the pack is ready.",ck:"Contact",ctt:"Discord and YouTube",
+cbo:"Builds, bug reports, sneak peeks — Discord. Install, showcase, updates — YouTube.",
+cd:"Join Discord",fo:"Unofficial fan project. Grand Theft Auto and GTA are trademarks of Take-Two / Rockstar Games. 18+.",
+toast:"Download is not live yet. Join Discord — it drops there first.",
+feat:[["Native menu","Rockstar draw — clean, fast, no NativeUI. J opens the menu, numpad selects."],["ScriptHook V + .NET","Stable script stack. Legacy and Enhanced, matching .NET."],["On foot + vehicle","The same system on the street and in the car."],[".cfg, not bloat","Sounds, behavior, keys — a config file."],["Modular","Open structure. Keep the core small."],["Night atmosphere","Dark Los Santos. Neon, rain, rhythm."]],
+st:[["01","Script Hook V","Install official Script Hook V into the GTA 5 root folder."],["02","ScriptHookV .NET","Legacy or Enhanced — match your build. Do not mix."],["03","Scripts folder","Copy files here: Grand Theft Auto V\\\\scripts\\\\"],["04","Menu: J","Launch story mode. J opens the menu. Key is in the .cfg."]]}};
+let lang=localStorage.getItem("coffeein-lang")==="en"?"en":"hu";
+const $=s=>document.querySelector(s);
+function paint(){const t=T[lang];document.documentElement.lang=lang;
+document.querySelectorAll("[data-i]").forEach(el=>{el.textContent=t[el.dataset.i]||""});
+$("#hu").classList.toggle("on",lang==="hu");$("#en").classList.toggle("on",lang==="en");
+$("#features").innerHTML=t.feat.map(([a,b])=>`<div class="g feat"><h3 class="d">${a}</h3><p>${b}</p></div>`).join("");
+$("#steps").innerHTML=t.st.map(([n,a,b])=>`<div class="g step"><span class="nn">${n}</span><div><h3>${a}</h3><p>${b}</p></div></div>`).join("");}
+function ping(){const el=$("#toast");el.textContent=T[lang].toast;el.classList.add("show");clearTimeout(ping._t);ping._t=setTimeout(()=>el.classList.remove("show"),4200);}
+$("#hu").onclick=()=>{lang="hu";localStorage.setItem("coffeein-lang",lang);paint()};
+$("#en").onclick=()=>{lang="en";localStorage.setItem("coffeein-lang",lang);paint()};
+$("#dl").onclick=ping;$("#dl2").onclick=ping;$("#y").textContent=new Date().getFullYear();paint();
+</script></body></html>

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "CoffeeinMod",
+      "hasCanvas": false,
+      "bodyTextLen": 2241,
+      "bodyTextHash": "dd84cf95a98dccd28369648ef9b90e424f77c123bf54d9dbfa992a4015f1a409",
+      "bodyTextPrefix": "COFFEEINMOD Modok Telepítés Letöltés Közösség HU EN GTA 5 · PC ·",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "CoffeeinMod",
+      "hasCanvas": false,
+      "bodyTextLen": 2207,
+      "bodyTextHash": "ab188ac1016852cc098b83283e397d720d46e35ece9f49e40780d25f95f8a787",
+      "bodyTextPrefix": "COFFEEINMOD HU EN GTA 5 · PC · SINGLEPLAYER COFFEEINMOD Fekete é",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
