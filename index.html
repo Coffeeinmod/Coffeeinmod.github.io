@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CoffeeinMod — GTA 5 singleplayer</title>
-  <meta name="description" content="Fekete éjszaka. Narancs neon. Coffeein és GTA 5 mod — ScriptHook V, natív menü, singleplayer." />
+  <title>CoffeeinMod — GTA 5 + TikTok Live</title>
+  <meta name="description" content="Coffeein Mod: Chaos effektek GTA 5-ben. CoffeeinTok: TikTok Live overlay — a nézők ajándékkal irányítják a játékot." />
   <meta name="theme-color" content="#070604" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta property="og:title" content="CoffeeinMod" />
-  <meta property="og:description" content="Fekete éjszaka. Narancs neon. Los Santos, ahogy te akarod." />
+  <meta property="og:description" content="Fekete éjszaka. Narancs neon. TikTok Live × GTA 5 Chaos." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,9 +23,9 @@
       CoffeeinMod
     </a>
     <nav class="links">
-      <a href="#mods" data-i="nav.mods"></a>
-      <a href="#install" data-i="nav.install"></a>
-      <a href="#download" data-i="nav.download"></a>
+      <a href="#mod" data-i="nav.mod"></a>
+      <a href="#effects" data-i="nav.effects"></a>
+      <a href="#tok" data-i="nav.tok"></a>
       <a href="#community" data-i="nav.community"></a>
     </nav>
     <div class="lang">
@@ -36,68 +36,72 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-bg" style="background-image:linear-gradient(180deg,rgb(7 6 4/.35),var(--bg) 88%),url('images/hero.jpg');background-size:cover;background-position:center;"></div>
       <div class="wrap">
         <p class="kicker" data-i="hero.kicker"></p>
         <h1 class="display">COFFEEIN<span class="neon">MOD</span></h1>
         <p class="lead" data-i="hero.lead"></p>
         <div class="row">
-          <button class="btn btn-primary" type="button" id="dl" data-i="hero.cta"></button>
+          <a class="btn btn-primary" href="#mod" data-i="hero.cta"></a>
           <a class="btn btn-glass" href="https://discord.gg/BYpNKz6KP" target="_blank" rel="noreferrer" data-i="hero.discord"></a>
           <a class="btn btn-outline" href="https://www.youtube.com/@c0ffeein" target="_blank" rel="noreferrer" data-i="hero.youtube"></a>
         </div>
       </div>
     </section>
 
-    <section id="mods">
+    <section id="mod">
       <div class="wrap">
-        <p class="kicker" data-i="mods.kicker"></p>
-        <h2 class="display" data-i="mods.title"></h2>
-        <p class="muted" data-i="mods.lead"></p>
-        <div class="grid-2">
-          <article class="glass">
-            <div class="cap"></div>
-            <div class="pad">
-              <span class="tag" data-i="mods.coffeein.tag"></span>
-              <h3 class="display" data-i="mods.coffeein.name"></h3>
-              <p data-i="mods.coffeein.body"></p>
-            </div>
+        <p class="kicker" data-i="mod.kicker"></p>
+        <h2 class="display" data-i="mod.title"></h2>
+        <p class="muted" data-i="mod.lead"></p>
+        <div class="grid-2 feature-split">
+          <article class="glass pad">
+            <span class="tag" data-i="mod.tag"></span>
+            <h3 class="display" data-i="mod.name"></h3>
+            <p data-i="mod.body"></p>
+            <ul class="bullets" id="mod-bullets"></ul>
           </article>
-          <article class="glass">
-            <div class="cap gta"></div>
-            <div class="pad">
-              <span class="tag" data-i="mods.gta.tag"></span>
-              <h3 class="display" data-i="mods.gta.name"></h3>
-              <p data-i="mods.gta.body"></p>
-            </div>
+          <div class="gallery" id="mod-gallery"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="effects">
+      <div class="wrap">
+        <p class="kicker" data-i="effects.kicker"></p>
+        <h2 class="display" data-i="effects.title"></h2>
+        <p class="muted" data-i="effects.lead"></p>
+        <div class="grid-3" id="effect-cats"></div>
+        <p class="kicker" style="margin-top:3rem" data-i="effects.examples.kicker"></p>
+        <h3 class="display section-sub" data-i="effects.examples.title"></h3>
+        <div class="chips" id="effect-chips"></div>
+      </div>
+    </section>
+
+    <section id="tok">
+      <div class="wrap">
+        <p class="kicker" data-i="tok.kicker"></p>
+        <h2 class="display" data-i="tok.title"></h2>
+        <p class="muted" data-i="tok.lead"></p>
+        <div class="grid-2 feature-split">
+          <div class="gallery" id="tok-gallery"></div>
+          <article class="glass pad">
+            <span class="tag" data-i="tok.tag"></span>
+            <h3 class="display" data-i="tok.name"></h3>
+            <p data-i="tok.body"></p>
+            <ul class="bullets" id="tok-bullets"></ul>
           </article>
         </div>
-        <p class="kicker" style="margin-top:4.5rem" data-i="features.kicker"></p>
-        <h2 class="display" data-i="features.title"></h2>
-        <div class="grid-3" id="features"></div>
+        <div class="grid-3" id="tok-features" style="margin-top:2rem"></div>
       </div>
     </section>
 
-    <section id="install">
-      <div class="wrap">
-        <p class="kicker" data-i="install.kicker"></p>
-        <h2 class="display" data-i="install.title"></h2>
-        <p class="muted" data-i="install.lead"></p>
-        <div id="steps"></div>
-        <p class="warn" data-i="install.note"></p>
-      </div>
-    </section>
-
-    <section id="download">
+    <section id="soon">
       <div class="wrap">
         <div class="glass cta-block">
-          <p class="kicker" data-i="download.kicker"></p>
-          <h2 class="display" data-i="download.title"></h2>
-          <p class="muted" data-i="download.body"></p>
-          <div class="row">
-            <button class="btn btn-primary" type="button" id="dl2" data-i="download.button"></button>
-          </div>
-          <p class="hint" data-i="download.hint"></p>
+          <p class="kicker" data-i="soon.kicker"></p>
+          <h2 class="display" data-i="soon.title"></h2>
+          <p class="muted" data-i="soon.body"></p>
         </div>
       </div>
     </section>
@@ -127,7 +131,6 @@
       <p style="margin-top:0.6rem">© <span id="y"></span> CoffeeinMod</p>
     </div>
   </footer>
-  <div class="toast glass" id="toast"></div>
 
   <script src="app.js"></script>
 </body>

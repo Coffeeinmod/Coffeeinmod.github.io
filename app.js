@@ -1,110 +1,177 @@
 const C = {
-      hu: {
-        "nav.mods": "Modok", "nav.install": "Telepítés", "nav.download": "Letöltés", "nav.community": "Közösség",
-        "hero.kicker": "GTA 5 · PC · Singleplayer",
-        "hero.lead": "Fekete éjszaka. Narancs neon. Los Santos, ahogy te akarod — egy kávé, és a város a tiéd.",
-        "hero.cta": "Letöltés hamarosan", "hero.discord": "Discord", "hero.youtube": "YouTube",
-        "mods.kicker": "A két projekt", "mods.title": "A modok",
-        "mods.lead": "Egy márka. Két GTA 5 élmény. ScriptHook V-re épülnek, natív menüvel, tiszta konfiggal.",
-        "mods.coffeein.tag": "Zászlóshajó", "mods.coffeein.name": "Coffeein",
-        "mods.coffeein.body": "A Coffeein a saját ScriptHook V scriptek. Nem egy felduzzasztott trainer — kompakt interakciós réteg natív, Rockstar-stílusú menüvel. Gyalog és járműben, .cfg-ből hangolható, nyílt szerkezet. Éjszaka, eső, neon: a város veled dolgozik.",
-        "mods.gta.tag": "GTA 5", "mods.gta.name": "GTA 5 Mod",
-        "mods.gta.body": "A GTA 5 singleplayer projekt a Coffeein köré. Világ, menü, minőségi élet — nem generic cheatpack. Legacy és Enhanced. Los Santos sötétebb, gyorsabb, a te ritmusodon.",
-        "features.kicker": "Rendszer", "features.title": "Ami bent van",
-        features: [
-          ["Natív menü", "Rockstar draw — tiszta, gyors, NativeUI nélkül. J a menü, numpad a választás."],
-          ["ScriptHook V + .NET", "Stabil script stack. Legacy és Enhanced, a megfelelő .NET builddel."],
-          ["Gyalog + jármű", "Ugyanaz a rendszer az utcán és a kocsiban. Nincs külön, félkész ág."],
-          [".cfg, nem bloat", "Hangok, viselkedés, billentyűk — konfigfájl. Nincs 40 menüoldal."],
-          ["Moduláris", "Nyílt szerkezet. Bővíthető, cserélhető, a mag kicsi marad."],
-          ["Éjszakai hangulat", "A Coffeein a sötét Los Santosra van hangolva. Neon, eső, ritmus."]
-        ],
-        "install.kicker": "Setup", "install.title": "Telepítés",
-        "install.lead": "Négy lépés. Ha valami nem tölt, a ScriptHook a hibás — mindig a játékbuildhez illeszd.",
-        steps: [
-          ["01", "Script Hook V", "Telepítsd a hivatalos Script Hook V-t a GTA 5 gyökérmappába."],
-          ["02", "ScriptHookV .NET", "Legacy vagy Enhanced — a te buildedhez tartozó .NET. Ne keverd."],
-          ["03", "Scripts mappa", "Másold a Coffeein fájlokat ide: Grand Theft Auto V\\\\scripts\\\\"],
-          ["04", "Menü: J", "Indítsd a story mode-ot. J nyitja a menüt. A billentyű a .cfg-ben cserélhető."]
-        ],
-        "install.note": "Csak singleplayer. Online-ban ne használd — ban.",
-        "download.kicker": "Release", "download.title": "Letöltés",
-        "download.body": "A nyilvános build még nincs kint. A Discordon jön elsőnek — changelog, hotfix, sneak peek.",
-        "download.button": "Hamarosan", "download.hint": "A link ide kerül, amint a pack kész.",
-        toast: "A letöltés még nincs kint. Csatlakozz Discordra, ott érkezik elsőnek.",
-        "community.kicker": "Kapcsolat", "community.title": "Discord és YouTube",
-        "community.body": "Build-ek, bugreport, sneak peek — Discord. Telepítés, showcase, update — YouTube.",
-        "community.discord": "Csatlakozás Discordra", "community.youtube": "YouTube csatorna",
-        "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto és a GTA a Take-Two Interactive / Rockstar Games védjegyei. 18+."
-      },
-      en: {
-        "nav.mods": "Mods", "nav.install": "Install", "nav.download": "Download", "nav.community": "Community",
-        "hero.kicker": "GTA 5 · PC · Singleplayer",
-        "hero.lead": "Black night. Amber neon. Los Santos the way you want it — one coffee, and the city is yours.",
-        "hero.cta": "Download soon", "hero.discord": "Discord", "hero.youtube": "YouTube",
-        "mods.kicker": "The two projects", "mods.title": "The mods",
-        "mods.lead": "One brand. Two GTA 5 experiences. Built on ScriptHook V, native menus, clean config.",
-        "mods.coffeein.tag": "Flagship", "mods.coffeein.name": "Coffeein",
-        "mods.coffeein.body": "Coffeein is the ScriptHook V script. Not a bloated trainer — a compact interaction layer with a native, Rockstar-style menu. On foot and in vehicle, tuned from a .cfg, open structure. Night, rain, neon: the city works with you.",
-        "mods.gta.tag": "GTA 5", "mods.gta.name": "GTA 5 Mod",
-        "mods.gta.body": "The GTA 5 singleplayer project around Coffeein. World, menu, quality of life — not a generic cheat pack. Legacy and Enhanced. Los Santos darker, faster, on your rhythm.",
-        "features.kicker": "System", "features.title": "What's inside",
-        features: [
-          ["Native menu", "Rockstar draw — clean, fast, no NativeUI. J opens the menu, numpad selects."],
-          ["ScriptHook V + .NET", "Stable script stack. Legacy and Enhanced, with the matching .NET build."],
-          ["On foot + vehicle", "The same system on the street and in the car. No half-finished branch."],
-          [".cfg, not bloat", "Sounds, behavior, keys — a config file. No 40-page menu."],
-          ["Modular", "Open structure. Extend it, swap it, keep the core small."],
-          ["Night atmosphere", "Coffeein is tuned for dark Los Santos. Neon, rain, rhythm."]
-        ],
-        "install.kicker": "Setup", "install.title": "Install",
-        "install.lead": "Four steps. If it doesn't load, ScriptHook is the usual culprit — match it to your game build.",
-        steps: [
-          ["01", "Script Hook V", "Install official Script Hook V into the GTA 5 root folder."],
-          ["02", "ScriptHookV .NET", "Legacy or Enhanced — the .NET that matches your build. Don't mix them."],
-          ["03", "Scripts folder", "Copy the Coffeein files here: Grand Theft Auto V\\\\scripts\\\\"],
-          ["04", "Menu: J", "Launch story mode. J opens the menu. The key is changeable in the .cfg."]
-        ],
-        "install.note": "Singleplayer only. Do not use it online — ban.",
-        "download.kicker": "Release", "download.title": "Download",
-        "download.body": "The public build is not out yet. Discord gets it first — changelog, hotfix, sneak peek.",
-        "download.button": "Coming soon", "download.hint": "The link lands here as soon as the pack is ready.",
-        toast: "Download is not live yet. Join Discord — it drops there first.",
-        "community.kicker": "Contact", "community.title": "Discord and YouTube",
-        "community.body": "Builds, bug reports, sneak peeks — Discord. Install, showcase, updates — YouTube.",
-        "community.discord": "Join Discord", "community.youtube": "YouTube channel",
-        "footer.unofficial": "Unofficial fan project. Grand Theft Auto and GTA are trademarks of Take-Two Interactive / Rockstar Games. 18+."
-      }
-    };
+  hu: {
+    "nav.mod": "Coffeein Mod", "nav.effects": "Effektek", "nav.tok": "CoffeeinTok", "nav.community": "Közösség",
+    "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
+    "hero.lead": "A nézők élőben belenyúlnak Los Santosba. Coffeein Mod a káosz a játékban — CoffeeinTok a híd a TikTok Live és a GTA között.",
+    "hero.cta": "Nézd meg a modokat", "hero.discord": "Discord", "hero.youtube": "YouTube",
 
-    let lang = localStorage.getItem("coffeein-lang") === "en" ? "en" : "hu";
-    const $ = (s) => document.querySelector(s);
+    "mod.kicker": "GTA 5 játékmod", "mod.title": "Coffeein Mod",
+    "mod.lead": "ChaosModV alapra épülő, saját Coffeein réteg: ScriptHook V + .NET, webhook szerverek, TikTok / Twitch interakció. A stream nézői parancsokat küldenek — a város reagál.",
+    "mod.tag": "Chaos × Live", "mod.name": "Mi ez?",
+    "mod.body": "Nem egy sima trainer. A Coffeein Mod a Chaos Mod világát köti össze élő streammel: NPC invázió, járműkáosz, katasztrófák, szupererők, fegyverek — mind webhookon, a live ajándékaihoz és szavazásokhoz igazítva. Telepítővel érkezik, ScriptHookot is behúz, OBS health overlay-jel.",
+    "mod.bullets": [
+      "ScriptHookVDotNet 3 API, stabil singleplayer stack",
+      "Fő webhook :6721 — parancsok, spawnok, effektek",
+      "NewModes :6728 — módok, jármű/ped, natív hívások",
+      "TikFinity bridge :8832 — élő ajándék → játék ugróhíd",
+      "OBS böngésző overlay: életerő sáv (127.0.0.1:6721)",
+      "FastTrainTracks.oiv — vonat sebességkorlát feloldás"
+    ],
 
-    function paint() {
-      const t = C[lang];
-      document.documentElement.lang = lang;
-      document.querySelectorAll("[data-i]").forEach((el) => { el.textContent = t[el.dataset.i] || ""; });
-      $("#hu").classList.toggle("on", lang === "hu");
-      $("#en").classList.toggle("on", lang === "en");
-      $("#features").innerHTML = t.features.map(([title, body]) =>
-        `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
-      ).join("");
-      $("#steps").innerHTML = t.steps.map(([n, title, body]) =>
-        `<div class="glass step"><span class="n">${n}</span><div><h3>${title}</h3><p>${body}</p></div></div>`
-      ).join("");
-    }
+    "effects.kicker": "Katalógus", "effects.title": "Milyen modok / effektek vannak",
+    "effects.lead": "Több mint száz webhook-parancs kategóriákra bontva. A live ajándékai ezeket indítják — a streamer állítja, mi kapcsolódik mihez.",
+    "effects.cats": [
+      ["NPC / ellenség", "Invázió, zombie, juggernaut, predátor, bohócok, Terminátor, Hulk, társ kutya, alien…"],
+      ["Különleges támadás", "Ágyúzás, konvoj, légicsapás, Grieferjesus, Sanctus, kék Sultan."],
+      ["Járműkáosz", "Random autó/motor, rakétás kocsi, robbanás, kick-flip, olajnyom, max upgrade."],
+      ["Katasztrófa", "Tornádó, földrengés, fekete lyuk, Chibaku Tensei."],
+      ["Világ / idő", "Időjárás (eső, mennydörgés, hó, Halloween), óra 0–23."],
+      ["Játékos + erő", "HP, teleport, skydive, körözés, szuper ütés/futás/ugrás, lézer, pénz, fegyver."]
+    ],
+    "effects.examples.kicker": "Ízelítő", "effects.examples.title": "Példa effektek",
+    "effects.chips": [
+      "Inváziós csapat","Hóember kamikaze","Zombie","Juggernaut","Gyilkos bohócok","Hulk",
+      "Légicsapás","Tornádó","Fekete lyuk","Rakétás autó","Olajnyomok","Szuper ütés",
+      "Max körözés","Railgun","Skydive","Véletlen teleport"
+    ],
 
-    function ping() {
-      const el = $("#toast");
-      el.textContent = C[lang].toast;
-      el.classList.add("show");
-      clearTimeout(ping._t);
-      ping._t = setTimeout(() => el.classList.remove("show"), 4200);
-    }
+    "tok.kicker": "Overlay app", "tok.title": "CoffeeinTok",
+    "tok.lead": "Windows alkalmazás (TikTok Live Viewer): a live eseményeit figyeli, ajándékokat azonosít, és webhookkal belövi a Coffeein Modot. Overlayek OBS-be, kerék, célok, TTS, AI chat.",
+    "tok.tag": "Live bridge", "tok.name": "A stream központja",
+    "tok.body": "CoffeeinTok a védőréteg a streames munkaasztalodon: TikTok Live kapcsolat, ajándék-katalógus ID alapján, akciószabályok, pontok, kerék és célok. Az overlay szerver localhoston fut — gift alert, kerék, legenda, battle. A webhook csak biztonságos loopback portokra mehet (6721 Coffeein Mod, bridge, saját overlay).",
+    "tok.bullets": [
+      "Ajándék → akció (GTA / Chaos / KOTH / gomb)",
+      "OBS overlayek: gift, kerék, eseménylegenda, battle",
+      "TTS + AI chat beállítások",
+      "Licenc / próba védett Setup-ban",
+      "KOTH rámpa: jármű/tárgy hullámok, sebességboost",
+      "YouTube zene / lokális lejátszás támogatás"
+    ],
+    "tok.features": [
+      ["Ajándék motor","Gift ID elsődleges egyezés — Rose ≠ Rosa. Combo, pause, reconnect."],
+      ["Overlay studio","Admin / editor / studio oldalak localhost:5050-en, tokennel védve."],
+      ["Biztonság","Webhook allowlist, DPAPI titkok, HWID-kötött licenc a védett buildben."]
+    ],
 
-    $("#hu").onclick = () => { lang = "hu"; localStorage.setItem("coffeein-lang", lang); paint(); };
-    $("#en").onclick = () => { lang = "en"; localStorage.setItem("coffeein-lang", lang); paint(); };
-    $("#dl").onclick = ping;
-    $("#dl2").onclick = ping;
-    $("#y").textContent = new Date().getFullYear();
-    paint();
+    "soon.kicker": "Release", "soon.title": "Letöltés később",
+    "soon.body": "Most a leírás és a hangulat van kint. A telepítők és packok linkjei később kerülnek ide — addig Discordon a sneak peek.",
+
+    "community.kicker": "Kapcsolat", "community.title": "Discord és YouTube",
+    "community.body": "Build, bugreport, live setup — Discord. Showcase és telepítés — YouTube.",
+    "community.discord": "Csatlakozás Discordra", "community.youtube": "YouTube csatorna",
+    "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
+  },
+  en: {
+    "nav.mod": "Coffeein Mod", "nav.effects": "Effects", "nav.tok": "CoffeeinTok", "nav.community": "Community",
+    "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
+    "hero.lead": "Viewers reach into Los Santos live. Coffeein Mod is the chaos in-game — CoffeeinTok is the bridge from TikTok Live to GTA.",
+    "hero.cta": "See the mods", "hero.discord": "Discord", "hero.youtube": "YouTube",
+
+    "mod.kicker": "GTA 5 game mod", "mod.title": "Coffeein Mod",
+    "mod.lead": "Built on ChaosModV with a Coffeein layer: ScriptHook V + .NET, webhook servers, TikTok / Twitch interaction. Viewers send commands — the city answers.",
+    "mod.tag": "Chaos × Live", "mod.name": "What it is",
+    "mod.body": "Not a plain trainer. Coffeein Mod wires Chaos Mod into the live stream: NPC invasions, vehicle chaos, disasters, superpowers, weapons — all via webhooks mapped to gifts and votes. Installer pulls ScriptHook, plus an OBS health overlay.",
+    "mod.bullets": [
+      "ScriptHookVDotNet 3 API, stable singleplayer stack",
+      "Main webhook :6721 — commands, spawns, effects",
+      "NewModes :6728 — modes, vehicle/ped, natives",
+      "TikFinity bridge :8832 — live gift → game hop",
+      "OBS browser overlay: health bar on 127.0.0.1:6721",
+      "FastTrainTracks.oiv — unlock train speed cap"
+    ],
+
+    "effects.kicker": "Catalog", "effects.title": "What mods / effects you get",
+    "effects.lead": "100+ webhook commands in categories. Live gifts fire them — the streamer maps what triggers what.",
+    "effects.cats": [
+      ["NPC / enemies", "Invasion, zombies, juggernaut, predator, clowns, Terminator, Hulk, doggo, alien…"],
+      ["Special attacks", "Barrage, convoy, air raid, Grieferjesus, Sanctus, blue Sultan."],
+      ["Vehicle chaos", "Random car/bike, rocket car, explode, kick-flip, oil leaks, max upgrade."],
+      ["Disaster", "Tornado, earthquake, black hole, Chibaku Tensei."],
+      ["World / time", "Weather (rain, thunder, snow, Halloween), clock 0–23."],
+      ["Player + power", "HP, teleport, skydive, wanted, super punch/run/jump, laser, money, guns."]
+    ],
+    "effects.examples.kicker": "Samples", "effects.examples.title": "Example effects",
+    "effects.chips": [
+      "Invasion squad","Kamikaze snowmen","Zombie","Juggernaut","Killer clowns","Hulk",
+      "Air raid","Tornado","Black hole","Rocket car","Oil leaks","Super punch",
+      "Max wanted","Railgun","Skydive","Random teleport"
+    ],
+
+    "tok.kicker": "Overlay app", "tok.title": "CoffeeinTok",
+    "tok.lead": "Windows app (TikTok Live Viewer): watches the live, matches gifts, and fires Coffeein Mod over webhooks. Overlays for OBS, wheel, goals, TTS, AI chat.",
+    "tok.tag": "Live bridge", "tok.name": "Stream control room",
+    "tok.body": "CoffeeinTok is the desk layer: TikTok Live connection, gift catalog by ID, action rules, points, wheel and goals. Overlay server on localhost — gift alert, wheel, legend, battle. Webhooks only to safe loopback ports (6721 Coffeein Mod, bridge, self).",
+    "tok.bullets": [
+      "Gift → action (GTA / Chaos / KOTH / key)",
+      "OBS overlays: gift, wheel, event legend, battle",
+      "TTS + AI chat settings",
+      "License / trial in the protected Setup",
+      "KOTH ramp: vehicle/prop waves, speed boost",
+      "YouTube music / local playback support"
+    ],
+    "tok.features": [
+      ["Gift engine","Gift ID first — Rose ≠ Rosa. Combo, pause, reconnect."],
+      ["Overlay studio","Admin / editor / studio on localhost:5050, token-gated."],
+      ["Safety","Webhook allowlist, DPAPI secrets, HWID-bound license in protected builds."]
+    ],
+
+    "soon.kicker": "Release", "soon.title": "Downloads later",
+    "soon.body": "Descriptions and vibe are live now. Installers and packs will land here later — Discord for sneak peeks until then.",
+
+    "community.kicker": "Contact", "community.title": "Discord and YouTube",
+    "community.body": "Builds, bugs, live setup — Discord. Showcase and install — YouTube.",
+    "community.discord": "Join Discord", "community.youtube": "YouTube channel",
+    "footer.unofficial": "Unofficial fan project. Grand Theft Auto / GTA are Take-Two / Rockstar trademarks. TikTok is a ByteDance product. 18+ · singleplayer only."
+  }
+};
+
+const GALLERIES = {
+  mod: [
+    ["images/gta.png", "GTA / Coffeein világ"],
+    ["images/hero.jpg", "Éjszakai hangulat"],
+    ["images/shot-section-mods.png", "Mod szekció"],
+    ["images/espresso.jpg", "Brand"]
+  ],
+  tok: [
+    ["images/coffeeintok.png", "CoffeeinTok"],
+    ["images/overlay.png", "Overlay"],
+    ["images/wheel.png", "Kerék"],
+    ["images/tomato.png", "Live branding"],
+    ["images/shot-app-builder-preview.png", "UI preview"]
+  ]
+};
+
+let lang = localStorage.getItem("coffeein-lang") === "en" ? "en" : "hu";
+const $ = (s) => document.querySelector(s);
+
+function paint() {
+  const t = C[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i]").forEach((el) => { el.textContent = t[el.dataset.i] || ""; });
+  $("#hu").classList.toggle("on", lang === "hu");
+  $("#en").classList.toggle("on", lang === "en");
+
+  $("#mod-bullets").innerHTML = t["mod.bullets"].map((b) => `<li>${b}</li>`).join("");
+  $("#tok-bullets").innerHTML = t["tok.bullets"].map((b) => `<li>${b}</li>`).join("");
+
+  $("#effect-cats").innerHTML = t["effects.cats"].map(([title, body]) =>
+    `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
+  ).join("");
+  $("#effect-chips").innerHTML = t["effects.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
+
+  $("#tok-features").innerHTML = t["tok.features"].map(([title, body]) =>
+    `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
+  ).join("");
+
+  $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt]) =>
+    `<figure class="shot glass"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`
+  ).join("");
+  $("#tok-gallery").innerHTML = GALLERIES.tok.map(([src, alt]) =>
+    `<figure class="shot glass"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`
+  ).join("");
+}
+
+$("#hu").onclick = () => { lang = "hu"; localStorage.setItem("coffeein-lang", lang); paint(); };
+$("#en").onclick = () => { lang = "en"; localStorage.setItem("coffeein-lang", lang); paint(); };
+$("#y").textContent = new Date().getFullYear();
+paint();
