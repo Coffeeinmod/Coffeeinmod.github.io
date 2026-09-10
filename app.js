@@ -81,22 +81,22 @@ const C = {
     ],
     
     "dis.kicker": "Új pack", "dis.title": "Dismemberment",
-    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. ASI + script + DLC. Nightly SHVDN-nel működik (v3.7.0-nightly.177 a zipben).",
+    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. ASI + script + DLC. Nightly SHVDN-nel működik.",
     "dis.tag": "ASI + Nightly", "dis.name": "Mi van a zipben",
-    "dis.body": "Tuned Dismemberment: DismembermentASI.asi, SHVDN script, fegyverlista, DLC .rpf, és ScriptHookVDotNet Nightly (asi + dll). A stable v3.6.0 helyett Nightly kell.",
+    "dis.body": "Tuned Dismemberment: DismembermentASI.asi, SHVDN script, fegyverlista, DLC .rpf, SHVDN Nightly-val (asi + dll). A stable v3.6.0 helyett Nightly kell.",
     "dis.bullets": [
       "DismembermentASI.asi",
       "scripts/Dismemberment.dll + cfg/toml",
       "mods/.../dismemberment/dlc.rpf",
-      "SHVDN Nightly: ScriptHookVDotNet.asi + ScriptHookVDotNet3.dll",
-      "deps/ScriptHookVDotNet-v3.7.0-nightly.177.zip"
+      "SHVDN Nightly kell (asi + DotNet3.dll)",
+      "Script Hook V (Blade) külön"
     ],
-    "dis.download": "Zip letöltése",
-    "dis.hint": "Script Hook V (Blade) külön kell. Újabb Nightly: github.com/scripthookvdotnet/scripthookvdotnet/wiki/Nightly-Builds",
+    "dis.download": "",
+    "dis.hint": "Csak leírás a site-on. Szükséges: Script Hook V + SHVDN Nightly (linkek lent).",
     "dis.req.tag": "Setup", "dis.req.title": "Szükséges",
     "dis.reqs": [
       "Script Hook V (Alexander Blade) — GTA gyökér",
-      "ScriptHookVDotNet Nightly (a zipben: nightly.177)",
+      "ScriptHookVDotNet Nightly",
       "GTA 5 Legacy story mode",
       "OpenIV mods folder ajánlott"
     ],
@@ -199,22 +199,22 @@ const C = {
     ],
     
     "dis.kicker": "New pack", "dis.title": "Dismemberment",
-    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. Works with SHVDN Nightly (v3.7.0-nightly.177 included).",
+    "dis.lead": "GTA 5 singleplayer gore / dismemberment — tuned pack. Works with SHVDN Nightly.",
     "dis.tag": "ASI + Nightly", "dis.name": "What's in the zip",
-    "dis.body": "Tuned Dismemberment: ASI, SHVDN script, weapon list, DLC .rpf, plus ScriptHookVDotNet Nightly (asi + dll). Use Nightly, not stable v3.6.0.",
+    "dis.body": "Tuned Dismemberment: ASI, SHVDN script, weapon list, DLC .rpf, with ScriptHookVDotNet Nightly (asi + dll). Use Nightly, not stable v3.6.0.",
     "dis.bullets": [
       "DismembermentASI.asi",
       "scripts/Dismemberment.dll + cfg/toml",
       "mods/.../dismemberment/dlc.rpf",
-      "SHVDN Nightly: ScriptHookVDotNet.asi + ScriptHookVDotNet3.dll",
-      "deps/ScriptHookVDotNet-v3.7.0-nightly.177.zip"
+      "Needs SHVDN Nightly (asi + DotNet3.dll)",
+      "Script Hook V (Blade) separately"
     ],
-    "dis.download": "Download zip",
-    "dis.hint": "Script Hook V (Blade) still separate. Newer Nightly: github.com/scripthookvdotnet/scripthookvdotnet/wiki/Nightly-Builds",
+    "dis.download": "",
+    "dis.hint": "Description only on the site. Requires Script Hook V + SHVDN Nightly (links below).",
     "dis.req.tag": "Setup", "dis.req.title": "Requirements",
     "dis.reqs": [
       "Script Hook V (Alexander Blade) — GTA root",
-      "ScriptHookVDotNet Nightly (in the zip: nightly.177)",
+      "ScriptHookVDotNet Nightly",
       "GTA 5 Legacy story mode",
       "OpenIV mods folder recommended"
     ],
