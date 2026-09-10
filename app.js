@@ -1,6 +1,6 @@
 const C = {
   hu: {
-    "nav.mod": "Coffeein Mod", "nav.effects": "Effektek", "nav.tok": "CoffeeinTok", "nav.community": "Közösség",
+    "nav.mod": "Coffeein Mod", "nav.effects": "Effektek", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.community": "Közösség",
     "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
     "hero.lead": "A nézők élőben belenyúlnak Los Santosba. Coffeein Mod a káosz a játékban — CoffeeinTok a híd a TikTok Live és a GTA között.",
     "hero.cta": "Nézd meg a modokat", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -53,6 +53,32 @@ const C = {
       ["Biztonság","Webhook allowlist, DPAPI titkok, HWID-kötött licenc a védett buildben."]
     ],
 
+    
+    "studio.kicker": "OBS × Live", "studio.title": "Live Studio Overlay",
+    "studio.lead": "A CoffeeinTok Studio a live kép és az overlayek közös vászna: 9:16 telefonméret, HLS TikTok stream, rárétegezett widgetek. OBS böngészőforrásként megy — a nézők ajándékai látszanak a streamben, miközben a GTA reagál.",
+    "studio.tag": "studio.html", "studio.name": "Egy vászon, sok réteg",
+    "studio.body": "A Studio nem csak egy HTML oldal: a nyers TikTok live videót játsza, fölé pedig az overlay pack kerül. Gift alert, kerék, célok, battle, coin jar, chat, top listák, eseménylegenda — mind localhost overlay URL, OBS-be húzva.",
+    "studio.bullets": [
+      "9:16 Studio nézet (390×844) — telefonkeret a live-hoz",
+      "HLS.js — TikTok stream lejátszás a Studio-ban",
+      "OBS Browser Source: overlay URL-ek localhoston",
+      "Eseménylegenda a live fölött (olvasható körvonalas szöveg)",
+      "Ajándék → vizuális alert + GTA webhook egyszerre"
+    ],
+    "studio.overlays.kicker": "Overlay pack", "studio.overlays.title": "Mi mehet OBS-be",
+    "studio.overlays": [
+      ["Gift alert", "Ajándék felvillanás, combo, hang — a stream fő vizuálja."],
+      ["Kerék + célok", "Wheel és goal overlay: a nézők pörgetnek / feltöltenek."],
+      ["Battle / race", "Csapatverseny és race widget a live energájához."],
+      ["Coin jar", "Fizikás érmeüveg (Matter.js) — ajándékok gyűlnek a jarba."],
+      ["Top listák", "Top gifters, likers, points — ki viszi a streambet."],
+      ["Chat + AI", "Chat overlay és AI válasz buborék a live mellett."]
+    ],
+    "studio.chips": [
+      "gift-alert","wheel","goals","battle","race","coin-jar-pro",
+      "overlay_legend","topgifters","toplikers","chat","ai-response","action-status",
+      "queue-status","stats","youtube-music","tiktokobs-widgets"
+    ],
     "soon.kicker": "Release", "soon.title": "Letöltés később",
     "soon.body": "Most a leírás és a hangulat van kint. A telepítők és packok linkjei később kerülnek ide — addig Discordon a sneak peek.",
 
@@ -62,7 +88,7 @@ const C = {
     "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
   },
   en: {
-    "nav.mod": "Coffeein Mod", "nav.effects": "Effects", "nav.tok": "CoffeeinTok", "nav.community": "Community",
+    "nav.mod": "Coffeein Mod", "nav.effects": "Effects", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.community": "Community",
     "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
     "hero.lead": "Viewers reach into Los Santos live. Coffeein Mod is the chaos in-game — CoffeeinTok is the bridge from TikTok Live to GTA.",
     "hero.cta": "See the mods", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -115,6 +141,32 @@ const C = {
       ["Safety","Webhook allowlist, DPAPI secrets, HWID-bound license in protected builds."]
     ],
 
+    
+    "studio.kicker": "OBS × Live", "studio.title": "Live Studio Overlay",
+    "studio.lead": "CoffeeinTok Studio is the shared canvas for the live feed and overlays: 9:16 phone frame, HLS TikTok stream, widgets stacked on top. Drop it into OBS as a browser source — gifts show on stream while GTA reacts.",
+    "studio.tag": "studio.html", "studio.name": "One canvas, many layers",
+    "studio.body": "Studio is more than a page: it plays the raw TikTok live video with the overlay pack on top. Gift alert, wheel, goals, battle, coin jar, chat, leaderboards, event legend — each a localhost overlay URL for OBS.",
+    "studio.bullets": [
+      "9:16 Studio view (390×844) — phone frame for the live",
+      "HLS.js — TikTok stream playback inside Studio",
+      "OBS Browser Source: overlay URLs on localhost",
+      "Event legend over the live (outlined readable text)",
+      "Gift → visual alert + GTA webhook together"
+    ],
+    "studio.overlays.kicker": "Overlay pack", "studio.overlays.title": "What goes into OBS",
+    "studio.overlays": [
+      ["Gift alert", "Gift pop, combo, sound — the main on-stream visual."],
+      ["Wheel + goals", "Wheel and goal overlays: viewers spin / fill goals."],
+      ["Battle / race", "Team battle and race widgets for live energy."],
+      ["Coin jar", "Physics coin jar (Matter.js) — gifts fill the jar."],
+      ["Leaderboards", "Top gifters, likers, points — who owns the stream."],
+      ["Chat + AI", "Chat overlay and AI reply bubbles beside the live."]
+    ],
+    "studio.chips": [
+      "gift-alert","wheel","goals","battle","race","coin-jar-pro",
+      "overlay_legend","topgifters","toplikers","chat","ai-response","action-status",
+      "queue-status","stats","youtube-music","tiktokobs-widgets"
+    ],
     "soon.kicker": "Release", "soon.title": "Downloads later",
     "soon.body": "Descriptions and vibe are live now. Installers and packs will land here later — Discord for sneak peeks until then.",
 
@@ -131,6 +183,13 @@ const GALLERIES = {
     ["images/hero.jpg", "Éjszakai hangulat"],
     ["images/shot-section-mods.png", "Mod szekció"],
     ["images/espresso.jpg", "Brand"]
+  ],
+  studio: [
+    ["images/overlay.png", "Overlay"],
+    ["images/wheel.png", "Kerék / Wheel"],
+    ["images/coffeeintok.png", "CoffeeinTok"],
+    ["images/tomato.png", "Live brand"],
+    ["images/shot-app-builder-preview.png", "Studio UI"]
   ],
   tok: [
     ["images/coffeeintok.png", "CoffeeinTok"],
@@ -161,6 +220,15 @@ function paint() {
 
   $("#tok-features").innerHTML = t["tok.features"].map(([title, body]) =>
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
+  ).join("");
+
+  $("#studio-bullets").innerHTML = t["studio.bullets"].map((b) => `<li>${b}</li>`).join("");
+  $("#studio-overlays").innerHTML = t["studio.overlays"].map(([title, body]) =>
+    `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
+  ).join("");
+  $("#studio-chips").innerHTML = t["studio.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
+  $("#studio-gallery").innerHTML = GALLERIES.studio.map(([src, alt]) =>
+    `<figure class="shot glass"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`
   ).join("");
 
   $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt]) =>
