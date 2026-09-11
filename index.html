@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CoffeeinMod — GTA 5 + TikTok Live</title>
-  <meta name="description" content="Coffeein Mod: Chaos effektek GTA 5-ben. CoffeeinTok: TikTok Live overlay — a nézők ajándékkal irányítják a játékot." />
+  <title>Coffeein Mod — Chaos, KOTH, Train · GTA V</title>
+  <meta name="description" content="Coffeein Mod GTA V-hez: Chaos, KOTH és Train mód, nézői támadások, TikTok-interakciók és testreszabható események élő közvetítésekhez." />
   <meta name="theme-color" content="#070604" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta property="og:title" content="CoffeeinMod" />
-  <meta property="og:description" content="Fekete éjszaka. Narancs neon. TikTok Live × GTA 5 Chaos." />
+  <meta property="og:description" content="A nézőid is beleszólnak a GTA V kalandodba. Chaos, rámpás kihívás, vonatos túlélés." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=fix15" />
+  <link rel="stylesheet" href="style.css?v=fix16" />
 </head>
 <body>
   <div class="grain"></div>
@@ -24,7 +24,7 @@
     </a>
     <nav class="links">
       <a href="#mod" data-i="nav.mod"></a>
-      <a href="#effects" data-i="nav.effects"></a>
+      <a href="#effects" data-i="nav.modes"></a>
       <a href="#tok" data-i="nav.tok"></a>
       <a href="#studio" data-i="nav.studio"></a>
       <a href="#dismember" data-i="nav.dismember"></a>
@@ -37,7 +37,7 @@
   </header>
   <div class="mob-nav wrap">
     <a href="#mod" data-i="nav.mod"></a>
-    <a href="#effects" data-i="nav.effects"></a>
+    <a href="#effects" data-i="nav.modes"></a>
     <a href="#tok" data-i="nav.tok"></a>
     <a href="#studio" data-i="nav.studio"></a>
       <a href="#dismember" data-i="nav.dismember"></a>
@@ -86,6 +86,20 @@
         <p class="kicker" style="margin-top:3rem" data-i="effects.examples.kicker"></p>
         <h3 class="display section-sub" data-i="effects.examples.title"></h3>
         <div class="chips" id="effect-chips"></div>
+        <div class="grid-2" style="margin-top:3rem">
+          <article class="glass pad">
+            <p class="kicker" data-i="how.kicker"></p>
+            <h3 class="display" data-i="how.title"></h3>
+            <ol class="bullets" id="how-steps" style="list-style:decimal;padding-left:1.3rem"></ol>
+            <p class="hint" style="margin-top:1rem;color:var(--subtle);font-size:0.9rem" data-i="how.note"></p>
+          </article>
+          <article class="glass pad">
+            <p class="kicker" data-i="install.kicker"></p>
+            <h3 class="display" data-i="install.title"></h3>
+            <p data-i="install.body"></p>
+            <ul class="bullets" id="install-guides"></ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -196,6 +210,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=fix15"></script>
+  <script src="app.js?v=fix16"></script>
 </body>
 </html>
