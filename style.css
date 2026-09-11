@@ -414,3 +414,44 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
 @media (prefers-reduced-motion: reduce) {
   .hero-glow, .hero h1 .neon, .mode-preview img, .mode-card, .hero-bg, .hero-video { animation: none !important; transition: none !important; }
 }
+
+
+.community-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.25rem;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.community-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgb(255 196 110 / 0.3), 0 0 32px rgb(255 106 0 / 0.16);
+}
+.community-icon {
+  flex: 0 0 auto;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+}
+.community-icon svg { width: 1.55rem; height: 1.55rem; display: block; }
+.community-icon.discord {
+  color: #fff;
+  background: #5865F2;
+  box-shadow: 0 0 18px rgb(88 101 242 / 0.45);
+}
+.community-icon.youtube {
+  color: #fff;
+  background: #FF0000;
+  box-shadow: 0 0 18px rgb(255 0 0 / 0.35);
+}
+.community-copy { min-width: 0; }
+.community-copy h3 { margin: 0; font-size: 1.55rem; line-height: 1.05; }
+.community-copy p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
