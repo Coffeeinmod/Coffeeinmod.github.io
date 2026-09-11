@@ -3,7 +3,7 @@ const C = {
     "nav.mod": "Coffeein Mod", "nav.modes": "Játékmódok", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Közösség",
     "hero.kicker": "GTA V · élő közvetítés · singleplayer",
     "hero.lead": "Chaos, rámpás kihívás, vonatos túlélés és nézői támadások egy GTA V modcsomagban. A közönséged segíthet, akadályozhat, és váratlan fordulatokat hozhat az élő adásba.",
-    "hero.cta": "Játékmódok megismerése", "hero.discord": "Discord", "hero.youtube": "YouTube",
+    "hero.cta": "Játékmódok megismerése", "hero.watch": "Működés közben", "hero.discord": "Discord", "hero.youtube": "YouTube",
 
     "mod.kicker": "Interaktív GTA V", "mod.title": "Coffeein Mod",
     "mod.lead": "A nézőid is beleszólnak a GTA V kalandodba.",
@@ -132,7 +132,7 @@ const C = {
     "nav.mod": "Coffeein Mod", "nav.modes": "Game modes", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Community",
     "hero.kicker": "GTA V · live stream · singleplayer",
     "hero.lead": "Chaos, ramp challenge, train survival, and viewer attacks in one GTA V mod pack. Your audience can help, hinder, and throw unexpected turns into the live show.",
-    "hero.cta": "Explore the modes", "hero.discord": "Discord", "hero.youtube": "YouTube",
+    "hero.cta": "Explore the modes", "hero.watch": "Watch it run", "hero.discord": "Discord", "hero.youtube": "YouTube",
 
     "mod.kicker": "Interactive GTA V", "mod.title": "Coffeein Mod",
     "mod.lead": "Your viewers get a say in your GTA V run.",
