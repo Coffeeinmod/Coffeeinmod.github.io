@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=fix18" />
+  <link rel="stylesheet" href="style.css?v=fix19" />
 </head>
 <body>
   <div class="grain"></div>
@@ -48,14 +48,25 @@
   <main id="top">
     <section class="hero">
       <div class="hero-bg" style="background-image:linear-gradient(180deg,rgb(7 6 4/.45),#070604 92%),url('images/hero.jpg');"></div>
-      <div class="wrap">
-        <p class="kicker" data-i="hero.kicker"></p>
-        <h1 class="display">COFFEEIN<span class="neon">MOD</span></h1>
-        <p class="lead" data-i="hero.lead"></p>
-        <div class="row">
-          <a class="btn btn-primary" href="#mod" data-i="hero.cta"></a>
-          <a class="btn btn-glass" href="https://discord.gg/BYpNKz6KP" target="_blank" rel="noreferrer" data-i="hero.discord"></a>
-          <a class="btn btn-outline" href="https://www.youtube.com/@c0ffeein" target="_blank" rel="noreferrer" data-i="hero.youtube"></a>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker" data-i="hero.kicker"></p>
+          <h1 class="display">COFFEEIN<span class="neon">MOD</span></h1>
+          <p class="lead" data-i="hero.lead"></p>
+          <div class="row">
+            <a class="btn btn-primary" href="#mod" data-i="hero.cta"></a>
+            <a class="btn btn-glass" href="https://www.youtube.com/shorts/r468g9Y6TCg" target="_blank" rel="noreferrer" data-i="hero.watch"></a>
+            <a class="btn btn-outline" href="https://discord.gg/BYpNKz6KP" target="_blank" rel="noreferrer" data-i="hero.discord"></a>
+          </div>
+        </div>
+        <div class="hero-video glass">
+          <iframe
+            src="https://www.youtube.com/embed/r468g9Y6TCg"
+            title="Coffeein Mod Shorts"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
     </section>
@@ -210,6 +221,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=fix18"></script>
+  <script src="app.js?v=fix19"></script>
 </body>
 </html>
