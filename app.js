@@ -259,6 +259,12 @@ const C = {
   }
 };
 
+const MODE_PREVIEWS = [
+  "images/mod-hud-night.jpg",
+  "images/mod-koth.jpg",
+  "images/mod-train-crash.jpg"
+];
+
 const GALLERIES = {
   dis: [
     ["images/dis-user-1.jpg", "Dismemberment"],
@@ -298,8 +304,8 @@ function paint() {
   $("#mod-bullets").innerHTML = t["mod.bullets"].map((b) => `<li>${b}</li>`).join("");
   $("#tok-bullets").innerHTML = t["tok.bullets"].map((b) => `<li>${b}</li>`).join("");
 
-  $("#effect-cats").innerHTML = t["effects.cats"].map(([title, body]) =>
-    `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
+  $("#effect-cats").innerHTML = t["effects.cats"].map(([title, body], i) =>
+    `<article class="glass mode-card"><div class="mode-preview"><img src="${MODE_PREVIEWS[i] || MODE_PREVIEWS[0]}" alt="${title}" loading="lazy" /></div><div class="mode-body"><h3 class="display">${title}</h3><p>${body}</p></div></article>`
   ).join("");
   $("#effect-chips").innerHTML = t["effects.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
   $("#how-steps").innerHTML = t["how.steps"].map((b) => `<li>${b}</li>`).join("");
@@ -329,3 +335,23 @@ $("#hu").onclick = () => { lang = "hu"; localStorage.setItem("coffeein-lang", la
 $("#en").onclick = () => { lang = "en"; localStorage.setItem("coffeein-lang", lang); paint(); };
 $("#y").textContent = new Date().getFullYear();
 paint();
+
+(function heroParallax() {
+  const bg = document.getElementById("hero-bg");
+  if (!bg || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let mx = 0, my = 0, sy = 0;
+  const paintBg = () => {
+    const x = mx * 12;
+    const y = my * 8 + sy * 0.12;
+    bg.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.1)`;
+  };
+  window.addEventListener("pointermove", (e) => {
+    mx = (e.clientX / window.innerWidth) - 0.5;
+    my = (e.clientY / window.innerHeight) - 0.5;
+    paintBg();
+  }, { passive: true });
+  window.addEventListener("scroll", () => {
+    sy = window.scrollY || 0;
+    paintBg();
+  }, { passive: true });
+})();
