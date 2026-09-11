@@ -1,41 +1,56 @@
 const C = {
   hu: {
-    "nav.mod": "Coffeein Mod", "nav.effects": "Effektek", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Közösség",
-    "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
-    "hero.lead": "A nézők élőben belenyúlnak Los Santosba. Coffeein Mod a káosz a játékban — CoffeeinTok a híd a TikTok Live és a GTA között.",
-    "hero.cta": "Nézd meg a modokat", "hero.discord": "Discord", "hero.youtube": "YouTube",
+    "nav.mod": "Coffeein Mod", "nav.modes": "Játékmódok", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Közösség",
+    "hero.kicker": "GTA V · élő közvetítés · singleplayer",
+    "hero.lead": "Chaos, rámpás kihívás, vonatos túlélés és nézői támadások egy GTA V modcsomagban. A közönséged segíthet, akadályozhat, és váratlan fordulatokat hozhat az élő adásba.",
+    "hero.cta": "Játékmódok megismerése", "hero.discord": "Discord", "hero.youtube": "YouTube",
 
-    "mod.kicker": "GTA 5 játékmod", "mod.title": "Coffeein Mod",
-    "mod.lead": "ChaosModV alapra épülő, saját Coffeein réteg: ScriptHook V + .NET, webhook szerverek, TikTok / Twitch interakció. A stream nézői parancsokat küldenek — a város reagál.",
-    "mod.tag": "Chaos × Live", "mod.name": "Mi ez?",
-    "mod.body": "Nem egy sima trainer. A Coffeein Mod a Chaos Mod világát köti össze élő streammel: NPC invázió, járműkáosz, katasztrófák, szupererők, fegyverek — mind webhookon, a live ajándékaihoz és szavazásokhoz igazítva. Telepítővel érkezik, ScriptHookot is behúz, OBS health overlay-jel.",
+    "mod.kicker": "Interaktív GTA V", "mod.title": "Coffeein Mod",
+    "mod.lead": "A nézőid is beleszólnak a GTA V kalandodba.",
+    "mod.tag": "Live × GTA", "mod.name": "Mi ez?",
+    "mod.body": "A Coffeein Mod egy interaktív GTA V modcsomag, amely összeköti a játékot az élő közvetítés eseményeivel. A megfelelően beállított TikTok Live / TikFinity kapcsolaton keresztül a nézői események járműveket, ellenfeleket, segítségeket és különleges effekteket indíthatnak el a játékban. A csomag Twitch chates szavazást támogató komponenst is tartalmaz. Te játszol, a közönséged pedig alakítja a kihívást.",
     "mod.bullets": [
-      "ScriptHookVDotNet 3 API, stabil singleplayer stack",
-      "Fő webhook :6721 — parancsok, spawnok, effektek",
-      "NewModes :6728 — módok, jármű/ped, natív hívások",
-      "TikFinity bridge :8832 — élő ajándék → játék ugróhíd",
-      "OBS böngésző overlay: életerő sáv (127.0.0.1:6721)",
-      "FastTrainTracks.oiv — vonat sebességkorlát feloldás"
+      "Chaos — váratlan effektek és nézői döntések",
+      "KOTH / Ramp — juss fel, tartsd meg a csúcsot",
+      "Train — érj célba a vonattal a chat ellen",
+      "Nézői támadások és segítő események",
+      "Kijelzők, ranglisták, OBS életerő-overlay",
+      "TikTok / TikFinity + Twitch szavazás (külön beállítás)"
     ],
 
-    "effects.kicker": "Katalógus", "effects.title": "Milyen modok / effektek vannak",
-    "effects.lead": "Több mint száz webhook-parancs kategóriákra bontva. A live ajándékai ezeket indítják — a streamer állítja, mi kapcsolódik mihez.",
+    "effects.kicker": "Három fő mód", "effects.title": "Játékmódok",
+    "effects.lead": "Chaos, KOTH / Ramp és Train — plusz GTA-funkciók és nézői események, amiket te állítasz össze az adásodhoz.",
     "effects.cats": [
-      ["NPC / ellenség", "Invázió, zombie, juggernaut, predátor, bohócok, Terminátor, Hulk, társ kutya, alien…"],
-      ["Különleges támadás", "Ágyúzás, konvoj, légicsapás, Grieferjesus, Sanctus, kék Sultan."],
-      ["Járműkáosz", "Random autó/motor, rakétás kocsi, robbanás, kick-flip, olajnyom, max upgrade."],
-      ["Katasztrófa", "Tornádó, földrengés, fekete lyuk, Chibaku Tensei."],
-      ["Világ / idő", "Időjárás (eső, mennydörgés, hó, Halloween), óra 0–23."],
-      ["Játékos + erő", "HP, teleport, skydive, körözés, szuper ütés/futás/ugrás, lézer, pénz, fegyver."]
+      ["Chaos", "Váratlan effektek, megváltozó játékszabályok és nézők által indított események. Alkalmazkodj ahhoz, amit Los Santos és a chatted éppen eléd dob. A következő fordulatot akár a saját nézőid is elindíthatják."],
+      ["KOTH / Ramp", "Küzdd fel magad a rámpa tetejére, tartsd 10 másodpercig a célzónát. A közönség járművekkel és akadályokkal próbál visszalökni — a chatnek még van néhány tankja."],
+      ["Train", "Vezesd végig a vonatot a kijelölt távon. A nézők akadályokkal és támadásokkal próbálnak megállítani — te a cél felé tartasz, ők döntik el, mi kerül a sínekre."]
     ],
-    "effects.examples.kicker": "Ízelítő", "effects.examples.title": "Példa effektek",
+    "effects.examples.kicker": "Extrák", "effects.examples.title": "Nézői támadások és GTA-funkciók",
     "effects.chips": [
-      "Inváziós csapat","Hóember kamikaze","Zombie","Juggernaut","Gyilkos bohócok","Hulk",
-      "Légicsapás","Tornádó","Fekete lyuk","Rakétás autó","Olajnyomok","Szuper ütés",
-      "Max körözés","Railgun","Skydive","Véletlen teleport"
+      "Fegyveres támadók","Terminator / Predator / Hulk","Gyilkos bohócok","Juggernaut",
+      "Unholy Army","Légitámadás","Tornádó / földrengés","Fekete lyuk",
+      "Jármű spawn","Fegyverek / HP","Szuperugrás / futás","Időjárás / napszak",
+      "Streamer–chat eredmény","Beküldő névfeliratok","OBS életerő-overlay"
+    ],
+    "how.kicker": "Interakció", "how.title": "Hogyan kapcsolódnak be a nézők?",
+    "how.steps": [
+      "Kiválasztod, milyen játékbeli események szerepeljenek az adásban.",
+      "Az interakciós rendszerben hozzárendeled őket ajándékokhoz vagy chatparancsokhoz.",
+      "Amikor megérkezik az esemény, a rendszer elküldi a játékbeli parancsot.",
+      "A nézők a közvetítésben látják, milyen segítséget vagy akadályt indítottak el."
+    ],
+    "how.note": "Te állítod össze, mi segítsen és mi nehezítsen. A TikTok/TikFinity és a Twitch kapcsolat külön beállítást igényel — a telepítő önmagában nem köti össze a fiókokat.",
+    "install.kicker": "Setup", "install.title": "Telepítés",
+    "install.body": "A Coffeein Modhoz Windowsos telepítő tartozik: kiválasztod a GTA V mappáját, és felmásolhatod a szükséges összetevőket. A ScriptHook elemek külön választhatók. Telepítés előtt zárd be a játékot, utána állítsd be az interakciót, válassz módot, és próbáld ki az eseményeket.",
+    "install.guides": [
+      "Telepítés és első indítás",
+      "TikTok / TikFinity események",
+      "Twitch szavazás",
+      "KOTH és Train indítása",
+      "OBS-kijelzők és elrendezés"
     ],
 
-    "tok.kicker": "Overlay app", "tok.title": "CoffeeinTok",
+        "tok.kicker": "Overlay app", "tok.title": "CoffeeinTok",
     "tok.lead": "Windows alkalmazás (TikTok Live Viewer): a live eseményeit figyeli, ajándékokat azonosít, és webhookkal belövi a Coffeein Modot. Overlayek OBS-be, kerék, célok, TTS, AI chat.",
     "tok.tag": "Live bridge", "tok.name": "A stream központja",
     "tok.body": "CoffeeinTok a védőréteg a streames munkaasztalodon: TikTok Live kapcsolat, ajándék-katalógus ID alapján, akciószabályok, pontok, kerék és célok. Az overlay szerver localhoston fut — gift alert, kerék, legenda, battle. A webhook csak biztonságos loopback portokra mehet (6721 Coffeein Mod, bridge, saját overlay).",
@@ -106,7 +121,7 @@ const C = {
       "Story mode indítás"
     ],
     "soon.kicker": "Release", "soon.title": "Letöltés később",
-    "soon.body": "Most a leírás és a hangulat van kint. A telepítők és packok linkjei később kerülnek ide — addig Discordon a sneak peek.",
+    "soon.body": "A Coffeein Mod telepítője és a részletes útmutatók hamarosan itt lesznek. Addig Discordon a sneak peek és a setup segítség.",
 
     "community.kicker": "Kapcsolat", "community.title": "Discord és YouTube",
     "community.body": "Build, bugreport, live setup — Discord. Showcase és telepítés — YouTube.",
@@ -114,42 +129,57 @@ const C = {
     "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
   },
   en: {
-    "nav.mod": "Coffeein Mod", "nav.effects": "Effects", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Community",
-    "hero.kicker": "GTA 5 · TikTok Live · Singleplayer",
-    "hero.lead": "Viewers reach into Los Santos live. Coffeein Mod is the chaos in-game — CoffeeinTok is the bridge from TikTok Live to GTA.",
-    "hero.cta": "See the mods", "hero.discord": "Discord", "hero.youtube": "YouTube",
+    "nav.mod": "Coffeein Mod", "nav.modes": "Game modes", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Community",
+    "hero.kicker": "GTA V · live stream · singleplayer",
+    "hero.lead": "Chaos, ramp challenge, train survival, and viewer attacks in one GTA V mod pack. Your audience can help, hinder, and throw unexpected turns into the live show.",
+    "hero.cta": "Explore the modes", "hero.discord": "Discord", "hero.youtube": "YouTube",
 
-    "mod.kicker": "GTA 5 game mod", "mod.title": "Coffeein Mod",
-    "mod.lead": "Built on ChaosModV with a Coffeein layer: ScriptHook V + .NET, webhook servers, TikTok / Twitch interaction. Viewers send commands — the city answers.",
-    "mod.tag": "Chaos × Live", "mod.name": "What it is",
-    "mod.body": "Not a plain trainer. Coffeein Mod wires Chaos Mod into the live stream: NPC invasions, vehicle chaos, disasters, superpowers, weapons — all via webhooks mapped to gifts and votes. Installer pulls ScriptHook, plus an OBS health overlay.",
+    "mod.kicker": "Interactive GTA V", "mod.title": "Coffeein Mod",
+    "mod.lead": "Your viewers get a say in your GTA V run.",
+    "mod.tag": "Live × GTA", "mod.name": "What it is",
+    "mod.body": "Coffeein Mod is an interactive GTA V pack that ties the game to live-stream events. With TikTok Live / TikFinity set up, viewer events can spawn vehicles, enemies, helpers, and special effects in-game. The pack also includes a Twitch chat voting component. You play — the audience shapes the challenge.",
     "mod.bullets": [
-      "ScriptHookVDotNet 3 API, stable singleplayer stack",
-      "Main webhook :6721 — commands, spawns, effects",
-      "NewModes :6728 — modes, vehicle/ped, natives",
-      "TikFinity bridge :8832 — live gift → game hop",
-      "OBS browser overlay: health bar on 127.0.0.1:6721",
-      "FastTrainTracks.oiv — unlock train speed cap"
+      "Chaos — surprise effects and viewer choices",
+      "KOTH / Ramp — climb and hold the peak",
+      "Train — reach the goal against chat",
+      "Viewer attacks and helper events",
+      "HUDs, leaderboards, OBS health overlay",
+      "TikTok / TikFinity + Twitch voting (separate setup)"
     ],
 
-    "effects.kicker": "Catalog", "effects.title": "What mods / effects you get",
-    "effects.lead": "100+ webhook commands in categories. Live gifts fire them — the streamer maps what triggers what.",
+    "effects.kicker": "Three main modes", "effects.title": "Game modes",
+    "effects.lead": "Chaos, KOTH / Ramp, and Train — plus GTA extras and viewer events you wire for your stream.",
     "effects.cats": [
-      ["NPC / enemies", "Invasion, zombies, juggernaut, predator, clowns, Terminator, Hulk, doggo, alien…"],
-      ["Special attacks", "Barrage, convoy, air raid, Grieferjesus, Sanctus, blue Sultan."],
-      ["Vehicle chaos", "Random car/bike, rocket car, explode, kick-flip, oil leaks, max upgrade."],
-      ["Disaster", "Tornado, earthquake, black hole, Chibaku Tensei."],
-      ["World / time", "Weather (rain, thunder, snow, Halloween), clock 0–23."],
-      ["Player + power", "HP, teleport, skydive, wanted, super punch/run/jump, laser, money, guns."]
+      ["Chaos", "Surprise effects, shifting rules, and viewer-fired events. Adapt to whatever Los Santos and chat throw at you. The next twist might come from your own audience."],
+      ["KOTH / Ramp", "Fight to the top of the ramp and hold the zone for 10 seconds. Viewers push you back with vehicles and obstacles — chat still has a few tanks left."],
+      ["Train", "Drive the train the set distance while viewers drop obstacles and attacks on the tracks. You head for the goal — they decide what lands on the rails."]
     ],
-    "effects.examples.kicker": "Samples", "effects.examples.title": "Example effects",
+    "effects.examples.kicker": "Extras", "effects.examples.title": "Viewer attacks & GTA extras",
     "effects.chips": [
-      "Invasion squad","Kamikaze snowmen","Zombie","Juggernaut","Killer clowns","Hulk",
-      "Air raid","Tornado","Black hole","Rocket car","Oil leaks","Super punch",
-      "Max wanted","Railgun","Skydive","Random teleport"
+      "Armed attackers","Terminator / Predator / Hulk","Killer clowns","Juggernaut",
+      "Unholy Army","Air strike","Tornado / earthquake","Black hole",
+      "Vehicle spawn","Weapons / HP","Super jump / run","Weather / time of day",
+      "Streamer–chat score","Sender nameplates","OBS health overlay"
+    ],
+    "how.kicker": "Interaction", "how.title": "How do viewers join in?",
+    "how.steps": [
+      "Pick which in-game events belong in the stream.",
+      "Map them in the interaction system to gifts or chat commands.",
+      "When the event arrives, the system sends the in-game command.",
+      "Viewers see on stream what help or obstacle they triggered."
+    ],
+    "how.note": "You decide what helps and what hurts. TikTok/TikFinity and Twitch need separate setup — the installer alone does not link streaming accounts.",
+    "install.kicker": "Setup", "install.title": "Install",
+    "install.body": "Coffeein Mod ships with a Windows installer: pick your GTA V folder and copy the required pieces. ScriptHook parts are optional in the installer. Close the game first, then set up interaction, pick a mode, and try the events.",
+    "install.guides": [
+      "Install and first launch",
+      "TikTok / TikFinity events",
+      "Twitch voting",
+      "Starting KOTH and Train",
+      "OBS overlays and layout"
     ],
 
-    "tok.kicker": "Overlay app", "tok.title": "CoffeeinTok",
+        "tok.kicker": "Overlay app", "tok.title": "CoffeeinTok",
     "tok.lead": "Windows app (TikTok Live Viewer): watches the live, matches gifts, and fires Coffeein Mod over webhooks. Overlays for OBS, wheel, goals, TTS, AI chat.",
     "tok.tag": "Live bridge", "tok.name": "Stream control room",
     "tok.body": "CoffeeinTok is the desk layer: TikTok Live connection, gift catalog by ID, action rules, points, wheel and goals. Overlay server on localhost — gift alert, wheel, legend, battle. Webhooks only to safe loopback ports (6721 Coffeein Mod, bridge, self).",
@@ -220,7 +250,7 @@ const C = {
       "Launch story mode"
     ],
     "soon.kicker": "Release", "soon.title": "Downloads later",
-    "soon.body": "Descriptions and vibe are live now. Installers and packs will land here later — Discord for sneak peeks until then.",
+    "soon.body": "The Coffeein Mod installer and full guides will land here soon. Until then — Discord for sneak peeks and setup help.",
 
     "community.kicker": "Contact", "community.title": "Discord and YouTube",
     "community.body": "Builds, bugs, live setup — Discord. Showcase and install — YouTube.",
@@ -270,6 +300,8 @@ function paint() {
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
   ).join("");
   $("#effect-chips").innerHTML = t["effects.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
+  $("#how-steps").innerHTML = t["how.steps"].map((b) => `<li>${b}</li>`).join("");
+  $("#install-guides").innerHTML = t["install.guides"].map((b) => `<li>${b}</li>`).join("");
 
   $("#tok-features").innerHTML = t["tok.features"].map(([title, body]) =>
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
