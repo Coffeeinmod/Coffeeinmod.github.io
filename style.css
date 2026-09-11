@@ -188,17 +188,23 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr minmax(12rem, 16rem);
-  gap: 1.75rem 2rem;
+  grid-template-columns: 1.1fr auto;
+  gap: 1.75rem 1.5rem;
+  align-items: end;
+}
+.hero-videos {
+  display: flex;
+  gap: 0.75rem;
+  justify-self: end;
   align-items: end;
 }
 .hero-video {
   overflow: hidden;
   border-radius: 1.25rem;
   aspect-ratio: 9 / 16;
-  max-height: min(28rem, 70dvh);
-  justify-self: end;
-  width: 100%;
+  width: min(13.5rem, 42vw);
+  max-height: min(26rem, 68dvh);
+  flex: 0 0 auto;
 }
 .hero-video iframe {
   width: 100%;
@@ -212,9 +218,14 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
     justify-items: center;
   }
   .hero-copy { width: 100%; }
-  .hero-video {
+  .hero-videos {
     justify-self: center;
-    max-width: 16rem;
-    max-height: 24rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero-video {
+    width: min(11.5rem, 44vw);
+    max-height: 22rem;
   }
 }
