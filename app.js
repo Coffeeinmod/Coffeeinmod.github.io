@@ -264,10 +264,12 @@ const GALLERIES = {
     ["images/dis-user-1.jpg", "Dismemberment"],
   ],
   mod: [
-    ["images/gta.png", "GTA / Coffeein"],
-    ["images/hero.jpg", "Éjszakai hangulat"],
-    ["images/espresso.jpg", "Brand"],
-    ["images/coffeein.jpg", "Coffeein"]
+    ["images/mod-menu.jpg", "Coffeein Mod menü"],
+    ["images/mod-koth.jpg", "KOTH / Ramp"],
+    ["images/mod-train-crash.jpg", "Train mód"],
+    ["images/mod-train-plane.jpg", "Train × chat"],
+    ["images/mod-hud-config.jpg", "Életerő HUD"],
+    ["images/mod-hud-night.jpg", "Streamer vs Chat"]
   ],
   tok: [
     ["images/ov-ugurtas.png", "Gift alert"],
