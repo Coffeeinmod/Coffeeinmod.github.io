@@ -229,3 +229,96 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
     max-height: 22rem;
   }
 }
+
+
+.hero-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: -10% -5% auto;
+  height: 70%;
+  z-index: 0;
+  background:
+    radial-gradient(45% 55% at 18% 35%, rgb(255 106 0 / 0.28), transparent 70%),
+    radial-gradient(40% 50% at 82% 20%, rgb(255 193 74 / 0.16), transparent 65%);
+  filter: blur(8px);
+  animation: glowPulse 7s var(--ease) infinite alternate;
+}
+@keyframes glowPulse {
+  from { opacity: 0.7; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.06); }
+}
+.hero-bg {
+  transform: translate3d(0,0,0) scale(1.08);
+  will-change: transform;
+  transition: transform 0.15s linear;
+}
+.hero h1 .neon {
+  animation: neonFlicker 4.5s ease-in-out infinite;
+}
+@keyframes neonFlicker {
+  0%, 100% { text-shadow: 0 0 18px rgb(255 106 0 / 0.55), 0 0 42px rgb(255 106 0 / 0.22); }
+  48% { text-shadow: 0 0 22px rgb(255 106 0 / 0.7), 0 0 58px rgb(255 106 0 / 0.35); }
+  52% { text-shadow: 0 0 10px rgb(255 106 0 / 0.35), 0 0 24px rgb(255 106 0 / 0.12); }
+}
+.btn-primary:hover {
+  box-shadow: 0 0 28px rgb(255 106 0 / 0.65);
+  filter: brightness(1.06);
+}
+.hero-video {
+  box-shadow: 0 0 0 1px var(--line), 0 0 32px rgb(255 106 0 / 0.18);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.hero-video:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgb(255 196 110 / 0.35), 0 0 40px rgb(255 106 0 / 0.32);
+}
+
+.mode-card {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.mode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 1px rgb(255 196 110 / 0.35), 0 0 36px rgb(255 106 0 / 0.22);
+}
+.mode-preview {
+  position: relative;
+  height: 9.5rem;
+  overflow: hidden;
+  background: #0b0907;
+}
+.mode-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  transition: transform 0.55s var(--ease), filter 0.55s var(--ease);
+  filter: saturate(1.05) brightness(0.92);
+}
+.mode-card:hover .mode-preview img {
+  transform: scale(1.12);
+  filter: saturate(1.2) brightness(1.02);
+}
+.mode-preview::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 55%;
+  background: linear-gradient(180deg, transparent, rgb(7 6 4 / 0.92));
+  pointer-events: none;
+}
+.mode-body { padding: 0.85rem 1.15rem 1.2rem; }
+.mode-body h3 { font-size: 1.7rem; line-height: 1.05; }
+.mode-body p { color: var(--muted); font-size: 0.9rem; line-height: 1.55; margin-top: 0.45rem; }
+
+.feat, .pad, .shot {
+  transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.feat:hover, .pad:hover {
+  box-shadow: 0 0 0 1px rgb(255 196 110 / 0.28), 0 0 28px rgb(255 106 0 / 0.12);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow, .hero h1 .neon, .mode-preview img, .mode-card, .hero-bg, .hero-video { animation: none !important; transition: none !important; }
+}
