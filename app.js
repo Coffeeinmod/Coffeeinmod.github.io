@@ -1,6 +1,6 @@
 const C = {
   hu: {
-    "nav.mod": "Coffeein Mod", "nav.modes": "Játékmódok", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Közösség",
+    "nav.mod": "Mod", "nav.modes": "Módok", "nav.tok": "Tok", "nav.studio": "Studio", "nav.dismember": "Dismember", "nav.community": "Kapcsolat",
     "hero.kicker": "GTA V · élő közvetítés · singleplayer",
     "hero.lead": "Chaos, rámpás kihívás, vonatos túlélés és nézői támadások egy GTA V modcsomagban. A közönséged segíthet, akadályozhat, és váratlan fordulatokat hozhat az élő adásba.",
     "hero.cta": "Játékmódok megismerése", "hero.watch": "Működés közben", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -129,7 +129,7 @@ const C = {
     "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
   },
   en: {
-    "nav.mod": "Coffeein Mod", "nav.modes": "Game modes", "nav.tok": "CoffeeinTok", "nav.studio": "Live Studio", "nav.dismember": "Dismemberment", "nav.community": "Community",
+    "nav.mod": "Mod", "nav.modes": "Modes", "nav.tok": "Tok", "nav.studio": "Studio", "nav.dismember": "Dismember", "nav.community": "Connect",
     "hero.kicker": "GTA V · live stream · singleplayer",
     "hero.lead": "Chaos, ramp challenge, train survival, and viewer attacks in one GTA V mod pack. Your audience can help, hinder, and throw unexpected turns into the live show.",
     "hero.cta": "Explore the modes", "hero.watch": "Watch it run", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -354,4 +354,28 @@ paint();
     sy = window.scrollY || 0;
     paintBg();
   }, { passive: true });
+})();
+
+(function navSpy() {
+  const ids = ["mod", "effects", "tok", "studio", "dismember", "community"];
+  const links = () => [...document.querySelectorAll("nav.links a, .mob-nav a")];
+  const setActive = (id) => {
+    links().forEach((a) => {
+      a.classList.toggle("is-active", a.getAttribute("href") === "#" + id);
+    });
+  };
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((e) => e.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    if (visible[0]) setActive(visible[0].target.id);
+  }, { rootMargin: "-28% 0px -55% 0px", threshold: [0.1, 0.35, 0.6] });
+  ids.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) io.observe(el);
+  });
+  links().forEach((a) => a.addEventListener("click", () => {
+    const id = (a.getAttribute("href") || "").slice(1);
+    if (id) setActive(id);
+  }));
 })();
