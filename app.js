@@ -309,7 +309,7 @@ const MODE_PREVIEWS = [
 
 const GALLERIES = {
   train: [
-    ["images/traintracks-speed.jpg", "Train mód — sebességkorlát nélkül"],
+    ["images/traintracks-speed.jpg", "1120 km/h — Fast Train Tracks"],
   ],
   dis: [
     ["images/dis-user-1.jpg", "Dismemberment"],
