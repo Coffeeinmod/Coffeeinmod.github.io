@@ -1,6 +1,6 @@
 const C = {
   hu: {
-    "nav.mod": "Mod", "nav.modes": "Módok", "nav.tok": "Tok", "nav.studio": "Studio", "nav.dismember": "Dismember", "nav.community": "Kapcsolat",
+    "nav.mod": "Mod", "nav.modes": "Módok", "nav.tok": "Tok", "nav.studio": "Studio", "nav.train": "Vonat", "nav.dismember": "Dismember", "nav.community": "Kapcsolat",
     "hero.kicker": "GTA V · élő közvetítés · singleplayer",
     "hero.lead": "Chaos, rámpás kihívás, vonatos túlélés és nézői támadások egy GTA V modcsomagban. A közönséged segíthet, akadályozhat, és váratlan fordulatokat hozhat az élő adásba.",
     "hero.cta": "Játékmódok megismerése", "hero.watch": "Működés közben", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -95,6 +95,27 @@ const C = {
       "queue-status","stats","youtube-music","tiktokobs-widgets"
     ],
     
+
+    "train.kicker": "OpenIV pack", "train.title": "Fast Train Tracks",
+    "train.lead": "Feloldja a GTA beépített vonatsebesség-korlátját — a Train módban ez kell a komoly tempóhoz.",
+    "train.tag": ".oiv", "train.name": "Mi ez?",
+    "train.body": "A FastTrainTracks.oiv a traintracks.xml-t cseréli az update.rpf / common.rpf alatt (az xml az OIV-ban van, külön nem kell). OpenIV-vel, mods folderbe telepítve a vonat már nem akad el ~100 km/h körül.",
+    "train.bullets": [
+      "Csak a .oiv kell — xml nincs külön",
+      "Coffeein Mod / Train módhoz ajánlott",
+      "OpenIV + mods folder (ne game folder)",
+      "Egyszeri telepítés"
+    ],
+    "train.download": "FastTrainTracks.oiv letöltése",
+    "train.hint": "OpenIV nélkül nem települ. Story mode, singleplayer.",
+    "train.steps.tag": "Telepítés", "train.steps.title": "Hogyan",
+    "train.steps": [
+      "Telepítsd az OpenIV-t (és a mods folder támogatást)",
+      "Töltsd le a FastTrainTracks.oiv-ot",
+      "Dupla katt / OpenIV → Install",
+      "Válaszd a mods folder opciót",
+      "Confirm Install, indítsd a játékot"
+    ],
     "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
     "dis.lead": "GTA 5 singleplayer gore / dismemberment — csak ami a működéshez kell (nem a teljes projekt).",
     "dis.tag": "ASI + script", "dis.name": "Mi van a zipben",
@@ -129,7 +150,7 @@ const C = {
     "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
   },
   en: {
-    "nav.mod": "Mod", "nav.modes": "Modes", "nav.tok": "Tok", "nav.studio": "Studio", "nav.dismember": "Dismember", "nav.community": "Connect",
+    "nav.mod": "Mod", "nav.modes": "Modes", "nav.tok": "Tok", "nav.studio": "Studio", "nav.train": "Train", "nav.dismember": "Dismember", "nav.community": "Connect",
     "hero.kicker": "GTA V · live stream · singleplayer",
     "hero.lead": "Chaos, ramp challenge, train survival, and viewer attacks in one GTA V mod pack. Your audience can help, hinder, and throw unexpected turns into the live show.",
     "hero.cta": "Explore the modes", "hero.watch": "Watch it run", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -224,6 +245,27 @@ const C = {
       "queue-status","stats","youtube-music","tiktokobs-widgets"
     ],
     
+
+    "train.kicker": "OpenIV pack", "train.title": "Fast Train Tracks",
+    "train.lead": "Unlocks GTA’s built-in train speed cap — needed for serious Train mode pace.",
+    "train.tag": ".oiv", "train.name": "What it is",
+    "train.body": "FastTrainTracks.oiv replaces traintracks.xml inside update.rpf / common.rpf (XML is inside the OIV — no separate file). Install with OpenIV into the mods folder so trains are no longer stuck around ~100 km/h.",
+    "train.bullets": [
+      "Only the .oiv — no separate XML",
+      "Recommended for Coffeein Mod / Train mode",
+      "OpenIV + mods folder (not game folder)",
+      "One-time install"
+    ],
+    "train.download": "Download FastTrainTracks.oiv",
+    "train.hint": "Needs OpenIV. Story mode, singleplayer.",
+    "train.steps.tag": "Install", "train.steps.title": "How to",
+    "train.steps": [
+      "Install OpenIV (with mods folder support)",
+      "Download FastTrainTracks.oiv",
+      "Double-click / OpenIV → Install",
+      "Choose the mods folder option",
+      "Confirm Install, launch the game"
+    ],
     "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
     "dis.lead": "GTA 5 singleplayer gore / dismemberment — only files needed to run (not the full project).",
     "dis.tag": "ASI + script", "dis.name": "What's in the zip",
@@ -266,6 +308,9 @@ const MODE_PREVIEWS = [
 ];
 
 const GALLERIES = {
+  train: [
+    ["images/traintracks-speed.jpg", "Train mód — sebességkorlát nélkül"],
+  ],
   dis: [
     ["images/dis-user-1.jpg", "Dismemberment"],
   ],
@@ -315,6 +360,8 @@ function paint() {
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
   ).join("");
 
+  $("#train-bullets").innerHTML = t["train.bullets"].map((b) => `<li>${b}</li>`).join("");
+  $("#train-steps").innerHTML = t["train.steps"].map((b) => `<li>${b}</li>`).join("");
   $("#dis-bullets").innerHTML = t["dis.bullets"].map((b) => `<li>${b}</li>`).join("");
   $("#dis-reqs").innerHTML = t["dis.reqs"].map((b) => `<li>${b}</li>`).join("");
   $("#dis-steps").innerHTML = t["dis.steps"].map((b) => `<li>${b}</li>`).join("");
@@ -325,6 +372,7 @@ function paint() {
   $("#studio-chips").innerHTML = t["studio.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
     const shot = (src, alt, i) =>
     `<figure class="shot glass${i === 0 ? ' shot-hero' : ''}"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`;
+  $("#train-gallery").innerHTML = GALLERIES.train.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#dis-gallery").innerHTML = GALLERIES.dis.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#studio-gallery").innerHTML = GALLERIES.studio.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt], i) => shot(src, alt, i)).join("");
@@ -357,7 +405,7 @@ paint();
 })();
 
 (function navSpy() {
-  const ids = ["mod", "effects", "tok", "studio", "dismember", "community"];
+  const ids = ["mod", "effects", "tok", "studio", "traintracks", "dismember", "community"];
   const links = () => [...document.querySelectorAll("nav.links a, .mob-nav a")];
   const setActive = (id) => {
     links().forEach((a) => {
