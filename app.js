@@ -177,7 +177,9 @@ const C = {
     "community.kicker": "Kapcsolat", "community.title": "Discord és YouTube",
     "community.body": "Build, bugreport, live setup — Discord. Showcase és telepítés — YouTube.",
     "community.discord": "Csatlakozás Discordra", "community.youtube": "YouTube csatorna",
-    "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
+    "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer.",
+    "footer.visitors": "Látogatások:",
+    "footer.analytics": "Sütimentes látogatottsági statisztika · hozzávetőleges országadat · GoatCounter"
   },
   en: {
     "nav.mod": "Mod", "nav.modes": "Modes", "nav.tok": "Tok", "nav.studio": "Studio", "nav.downloads": "Downloads", "nav.community": "Connect",
@@ -357,7 +359,9 @@ const C = {
     "community.kicker": "Contact", "community.title": "Discord and YouTube",
     "community.body": "Builds, bugs, live setup — Discord. Showcase and install — YouTube.",
     "community.discord": "Join Discord", "community.youtube": "YouTube channel",
-    "footer.unofficial": "Unofficial fan project. Grand Theft Auto / GTA are Take-Two / Rockstar trademarks. TikTok is a ByteDance product. 18+ · singleplayer only."
+    "footer.unofficial": "Unofficial fan project. Grand Theft Auto / GTA are Take-Two / Rockstar trademarks. TikTok is a ByteDance product. 18+ · singleplayer only.",
+    "footer.visitors": "Visits:",
+    "footer.analytics": "Cookie-free traffic statistics · approximate country data · GoatCounter"
   }
 };
 
@@ -450,6 +454,18 @@ $("#hu").onclick = () => { lang = "hu"; localStorage.setItem("coffeein-lang", la
 $("#en").onclick = () => { lang = "en"; localStorage.setItem("coffeein-lang", lang); paint(); };
 $("#y").textContent = new Date().getFullYear();
 paint();
+
+(function visitorCounter() {
+  const output = document.getElementById("visitor-count");
+  if (!output) return;
+  fetch("https://coffeein.goatcounter.com/counter/%2F.json", { mode: "cors" })
+    .then((response) => {
+      if (!response.ok) throw new Error("Visitor counter unavailable");
+      return response.json();
+    })
+    .then((data) => { output.textContent = data.count || "—"; })
+    .catch(() => { output.textContent = "—"; });
+})();
 
 (function heroParallax() {
   const bg = document.getElementById("hero-bg");

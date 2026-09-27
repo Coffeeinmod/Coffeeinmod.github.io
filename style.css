@@ -455,3 +455,21 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.visitor-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+  color: var(--muted);
+}
+.visitor-stat strong {
+  color: var(--accent-2);
+  font-family: "Manrope", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.analytics-note {
+  margin-top: 0.35rem;
+  color: var(--subtle);
+  font-size: 0.78rem;
+}
