@@ -458,12 +458,19 @@ paint();
 (function visitorCounter() {
   const output = document.getElementById("visitor-count");
   if (!output) return;
+  const endpoints = [
+    "https://coffeein.goatcounter.com/counter/%2F.json",
+    "https://coffeein.goatcounter.com/counter/%2F%3Fcounter-check%3D1.json"
+  ];
+  const fetchCount = async () => {
+    for (const endpoint of endpoints) {
+      const response = await fetch(endpoint, { mode: "cors" });
+      if (response.ok) return response.json();
+    }
+    throw new Error("Visitor counter unavailable");
+  };
   const load = (attempt = 0) => {
-    fetch("https://coffeein.goatcounter.com/counter/%2F.json", { mode: "cors" })
-      .then((response) => {
-        if (!response.ok) throw new Error("Visitor counter unavailable");
-        return response.json();
-      })
+    fetchCount()
       .then((data) => { output.textContent = data.count || "—"; })
       .catch(() => {
         if (attempt < 3) setTimeout(() => load(attempt + 1), 3000);
