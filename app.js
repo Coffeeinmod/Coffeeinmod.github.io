@@ -127,8 +127,7 @@ const C = {
       "101 fegyverhez 101 külön, pontos ikon",
       "Nagyobb, rendezett kártyák és teljesen nyitott középső rész",
       "Nincs képkockánkénti ikonkeresés vagy szögszámítás",
-      "Görgő lenyomása vagy Tab; görgetés a kategórián belül",
-      "Védett kiadási DLL; forráskód nincs a ZIP-ben"
+      "Görgő lenyomása vagy Tab; görgetés a kategórián belül"
     ],
     "wheelmod.download": "Weapon Wheel Overhaul letöltése",
     "wheelmod.hint": "GTA V Legacy Story Mode. Külön kell: Script Hook V + SHVDN Nightly.",
@@ -308,8 +307,7 @@ const C = {
       "101 distinct, accurate icons for 101 weapons",
       "Larger organized cards and a completely open center",
       "No per-frame icon lookup or wheel-angle calculation",
-      "Middle mouse or Tab; scroll within the selected category",
-      "Protected release DLL; source code is not included in the ZIP"
+      "Middle mouse or Tab; scroll within the selected category"
     ],
     "wheelmod.download": "Download Weapon Wheel Overhaul",
     "wheelmod.hint": "GTA V Legacy Story Mode. Also required: Script Hook V + SHVDN Nightly.",
