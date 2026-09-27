@@ -1,6 +1,6 @@
 const C = {
   hu: {
-    "nav.mod": "Mod", "nav.modes": "Módok", "nav.tok": "Tok", "nav.studio": "Studio", "nav.train": "Vonat", "nav.dismember": "Dismember", "nav.community": "Kapcsolat",
+    "nav.mod": "Mod", "nav.modes": "Módok", "nav.tok": "Tok", "nav.studio": "Studio", "nav.train": "Vonat", "nav.weapon": "Fegyverkerék", "nav.dismember": "Dismember", "nav.community": "Kapcsolat",
     "hero.kicker": "GTA V · élő közvetítés · singleplayer",
     "hero.lead": "Chaos, rámpás kihívás, vonatos túlélés és nézői támadások egy GTA V modcsomagban. A közönséged segíthet, akadályozhat, és váratlan fordulatokat hozhat az élő adásba.",
     "hero.cta": "Játékmódok megismerése", "hero.watch": "Működés közben", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -116,6 +116,34 @@ const C = {
       "Válaszd a mods folder opciót",
       "Confirm Install, indítsd a játékot"
     ],
+    "wheelmod.kicker": "Ingyenes script mod", "wheelmod.title": "Weapon Wheel Overhaul",
+    "wheelmod.lead": "Gyors, letisztult GTA V fegyverkerék 101 pontos fegyverikonnal.",
+    "wheelmod.tag": "DLL + INI", "wheelmod.name": "Gyors és pontos",
+    "wheelmod.body": "A GTA V Legacy Story Mode fegyverválasztójának könnyű átdolgozása. Minden támogatott fegyver saját képet kap, a felület kevesebbet takar a játékból, a háttérelmosás pedig alapból ki van kapcsolva.",
+    "wheelmod.bullets": [
+      "101 fegyverhez 101 külön, pontos ikon",
+      "Nagyobb, rendezett kártyák és teljesen nyitott középső rész",
+      "Nincs képkockánkénti ikonkeresés vagy szögszámítás",
+      "Görgő lenyomása vagy Tab; görgetés a kategórián belül",
+      "Védett kiadási DLL; forráskód nincs a ZIP-ben"
+    ],
+    "wheelmod.download": "Weapon Wheel Overhaul letöltése",
+    "wheelmod.hint": "GTA V Legacy Story Mode. Külön kell: Script Hook V + SHVDN Nightly.",
+    "wheelmod.req.tag": "Setup", "wheelmod.req.title": "Szükséges",
+    "wheelmod.reqs": [
+      "GTA V Legacy Story Mode",
+      "Script Hook V (Alexander Blade)",
+      "ScriptHookVDotNet Nightly",
+      "scripts mappa a GTA V gyökerében"
+    ],
+    "wheelmod.steps.kicker": "Telepítés",
+    "wheelmod.steps": [
+      "Zárd be a GTA V-öt",
+      "Telepítsd a Script Hook V-t és az SHVDN Nightly-t a GTA gyökerébe",
+      "A ZIP-ből másold a DLL és INI fájlt a scripts mappába",
+      "Indítsd el a Story Mode-ot",
+      "Nyitás: görgő lenyomása vagy Tab"
+    ],
     "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
     "dis.lead": "GTA 5 singleplayer gore / dismemberment — csak ami a működéshez kell (nem a teljes projekt).",
     "dis.tag": "ASI + script", "dis.name": "Mi van a zipben",
@@ -150,7 +178,7 @@ const C = {
     "footer.unofficial": "Nem hivatalos fanprojekt. A Grand Theft Auto / GTA a Take-Two / Rockstar védjegye. TikTok a ByteDance terméke. 18+ · csak singleplayer."
   },
   en: {
-    "nav.mod": "Mod", "nav.modes": "Modes", "nav.tok": "Tok", "nav.studio": "Studio", "nav.train": "Train", "nav.dismember": "Dismember", "nav.community": "Connect",
+    "nav.mod": "Mod", "nav.modes": "Modes", "nav.tok": "Tok", "nav.studio": "Studio", "nav.train": "Train", "nav.weapon": "Weapon Wheel", "nav.dismember": "Dismember", "nav.community": "Connect",
     "hero.kicker": "GTA V · live stream · singleplayer",
     "hero.lead": "Chaos, ramp challenge, train survival, and viewer attacks in one GTA V mod pack. Your audience can help, hinder, and throw unexpected turns into the live show.",
     "hero.cta": "Explore the modes", "hero.watch": "Watch it run", "hero.discord": "Discord", "hero.youtube": "YouTube",
@@ -266,6 +294,34 @@ const C = {
       "Choose the mods folder option",
       "Confirm Install, launch the game"
     ],
+    "wheelmod.kicker": "Free script mod", "wheelmod.title": "Weapon Wheel Overhaul",
+    "wheelmod.lead": "A fast, clean GTA V weapon wheel with 101 accurate weapon icons.",
+    "wheelmod.tag": "DLL + INI", "wheelmod.name": "Fast and accurate",
+    "wheelmod.body": "A lightweight replacement for the GTA V Legacy Story Mode weapon selector. Every supported weapon gets its own image, the interface covers less of the game, and background blur is disabled by default.",
+    "wheelmod.bullets": [
+      "101 distinct, accurate icons for 101 weapons",
+      "Larger organized cards and a completely open center",
+      "No per-frame icon lookup or wheel-angle calculation",
+      "Middle mouse or Tab; scroll within the selected category",
+      "Protected release DLL; source code is not included in the ZIP"
+    ],
+    "wheelmod.download": "Download Weapon Wheel Overhaul",
+    "wheelmod.hint": "GTA V Legacy Story Mode. Also required: Script Hook V + SHVDN Nightly.",
+    "wheelmod.req.tag": "Setup", "wheelmod.req.title": "Requirements",
+    "wheelmod.reqs": [
+      "GTA V Legacy Story Mode",
+      "Script Hook V by Alexander Blade",
+      "ScriptHookVDotNet Nightly",
+      "A scripts folder in the GTA V root"
+    ],
+    "wheelmod.steps.kicker": "Installation",
+    "wheelmod.steps": [
+      "Close GTA V",
+      "Install Script Hook V and SHVDN Nightly into the GTA root",
+      "Copy the DLL and INI from the ZIP into the scripts folder",
+      "Launch Story Mode",
+      "Open with middle mouse or Tab"
+    ],
     "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
     "dis.lead": "GTA 5 singleplayer gore / dismemberment — only files needed to run (not the full project).",
     "dis.tag": "ASI + script", "dis.name": "What's in the zip",
@@ -313,6 +369,9 @@ const GALLERIES = {
   ],
   dis: [
     ["images/dis-user-1.jpg", "Dismemberment"],
+  ],
+  wheelmod: [
+    ["images/weapon-wheel-overhaul.jpg", "Weapon Wheel Overhaul — 101 weapon icons"],
   ],
   mod: [
     ["images/mod-menu.jpg", "Coffeein Mod menü"],
@@ -362,6 +421,9 @@ function paint() {
 
   $("#train-bullets").innerHTML = t["train.bullets"].map((b) => `<li>${b}</li>`).join("");
   $("#train-steps").innerHTML = t["train.steps"].map((b) => `<li>${b}</li>`).join("");
+  $("#wheelmod-bullets").innerHTML = t["wheelmod.bullets"].map((b) => `<li>${b}</li>`).join("");
+  $("#wheelmod-reqs").innerHTML = t["wheelmod.reqs"].map((b) => `<li>${b}</li>`).join("");
+  $("#wheelmod-steps").innerHTML = t["wheelmod.steps"].map((b) => `<li>${b}</li>`).join("");
   $("#dis-bullets").innerHTML = t["dis.bullets"].map((b) => `<li>${b}</li>`).join("");
   $("#dis-reqs").innerHTML = t["dis.reqs"].map((b) => `<li>${b}</li>`).join("");
   $("#dis-steps").innerHTML = t["dis.steps"].map((b) => `<li>${b}</li>`).join("");
@@ -373,6 +435,7 @@ function paint() {
     const shot = (src, alt, i) =>
     `<figure class="shot glass${i === 0 ? ' shot-hero' : ''}"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`;
   $("#train-gallery").innerHTML = GALLERIES.train.map(([src, alt], i) => shot(src, alt, i)).join("");
+  $("#wheelmod-gallery").innerHTML = GALLERIES.wheelmod.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#dis-gallery").innerHTML = GALLERIES.dis.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#studio-gallery").innerHTML = GALLERIES.studio.map(([src, alt], i) => shot(src, alt, i)).join("");
   $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt], i) => shot(src, alt, i)).join("");
@@ -405,7 +468,7 @@ paint();
 })();
 
 (function navSpy() {
-  const ids = ["mod", "effects", "tok", "studio", "traintracks", "dismember", "community"];
+  const ids = ["mod", "effects", "tok", "studio", "traintracks", "weaponwheel", "dismember", "community"];
   const links = () => [...document.querySelectorAll("nav.links a, .mob-nav a")];
   const setActive = (id) => {
     links().forEach((a) => {
