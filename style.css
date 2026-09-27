@@ -460,8 +460,10 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin-top: 0.9rem;
+  margin-top: 1rem;
+  padding: 0.55rem 0.8rem;
   color: var(--muted);
+  font-size: 0.88rem;
 }
 .visitor-stat strong {
   color: var(--accent-2);

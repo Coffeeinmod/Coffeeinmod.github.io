@@ -68,6 +68,10 @@
             <a class="btn btn-glass" href="https://www.youtube.com/shorts/r468g9Y6TCg" target="_blank" rel="noreferrer" data-i="hero.watch"></a>
             <a class="btn btn-outline" href="https://discord.gg/BYpNKz6KP" target="_blank" rel="noreferrer" data-i="hero.discord"></a>
           </div>
+          <p class="visitor-stat glass">
+            <span data-i="footer.visitors"></span>
+            <strong id="visitor-count" aria-live="polite">—</strong>
+          </p>
         </div>
         <div class="hero-videos">
           <div class="hero-video glass">
@@ -312,17 +316,18 @@
   <footer>
     <div class="wrap">
       <p data-i="footer.unofficial"></p>
-      <p class="visitor-stat">
-        <span data-i="footer.visitors"></span>
-        <strong id="visitor-count" aria-live="polite">—</strong>
-      </p>
       <p class="analytics-note" data-i="footer.analytics"></p>
       <p style="margin-top:0.6rem">© <span id="y"></span> CoffeeinMod</p>
     </div>
   </footer>
 
+  <script>
+    window.goatcounter = {
+      path: function () { return window.location.pathname; }
+    };
+  </script>
   <script data-goatcounter="https://coffeein.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
-  <script src="app.js?v=analytics1"></script>
+  <script src="app.js?v=analytics2"></script>
 </body>
 </html>

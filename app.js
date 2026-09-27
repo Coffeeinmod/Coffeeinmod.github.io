@@ -458,13 +458,19 @@ paint();
 (function visitorCounter() {
   const output = document.getElementById("visitor-count");
   if (!output) return;
-  fetch("https://coffeein.goatcounter.com/counter/%2F.json", { mode: "cors" })
-    .then((response) => {
-      if (!response.ok) throw new Error("Visitor counter unavailable");
-      return response.json();
-    })
-    .then((data) => { output.textContent = data.count || "—"; })
-    .catch(() => { output.textContent = "—"; });
+  const load = (attempt = 0) => {
+    fetch("https://coffeein.goatcounter.com/counter/%2F.json", { mode: "cors" })
+      .then((response) => {
+        if (!response.ok) throw new Error("Visitor counter unavailable");
+        return response.json();
+      })
+      .then((data) => { output.textContent = data.count || "—"; })
+      .catch(() => {
+        if (attempt < 3) setTimeout(() => load(attempt + 1), 3000);
+        else output.textContent = "—";
+      });
+  };
+  load();
 })();
 
 (function heroParallax() {
