@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=v2-2026" />
+  <link rel="stylesheet" href="style.css?v=v2-counter" />
 </head>
 <body>
   <div class="grain"></div>
@@ -57,7 +57,7 @@
 
   <main id="top">
     <section class="hero">
-      <div class="hero-bg" id="hero-bg" style="background-image:linear-gradient(180deg,rgb(7 6 4/.45),#070604 92%),url('images/hero.jpg');"></div>
+      <div class="hero-bg" id="hero-bg" style="background-image:linear-gradient(180deg,rgb(7 6 4/.18) 0%,rgb(7 6 4/.12) 45%,rgb(7 6 4/.35) 70%,#070604 100%),url('images/hero.jpg');"></div>
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
@@ -69,10 +69,6 @@
             <a class="btn btn-glass" href="https://www.youtube.com/shorts/r468g9Y6TCg" target="_blank" rel="noreferrer" data-i="hero.watch"></a>
             <a class="btn btn-outline" href="https://discord.gg/3GxbZMJgB" target="_blank" rel="noreferrer" data-i="hero.discord"></a>
           </div>
-          <p class="visitor-stat glass">
-            <span data-i="footer.visitors"></span>
-            <strong id="visitor-count" aria-live="polite">—</strong>
-          </p>
         </div>
         <div class="hero-videos">
           <div class="hero-video glass">
@@ -331,6 +327,11 @@
 
   <footer>
     <div class="wrap">
+      <p class="visitor-stat glass">
+        <span class="visitor-dot" aria-hidden="true"></span>
+        <span data-i="footer.visitors"></span>
+        <strong id="visitor-count" aria-live="polite">—</strong>
+      </p>
       <p data-i="footer.unofficial"></p>
       <p class="analytics-note" data-i="footer.analytics"></p>
       <p style="margin-top:0.6rem">© <span id="y"></span> CoffeeinMod</p>
