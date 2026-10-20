@@ -5,8 +5,8 @@ const C = {
     "hero.lead": "Chaos, rámpás kihívás, vonatos túlélés és nézői támadások egy GTA V modcsomagban. A közönséged segíthet, akadályozhat, és váratlan fordulatokat hozhat az élő adásba.",
     "hero.cta": "Játékmódok megismerése", "hero.watch": "Működés közben", "hero.discord": "Discord", "hero.youtube": "YouTube",
 
-    "downloads.kicker": "Letölthető GTA V kiegészítők", "downloads.title": "Coffeein GTA V Modok",
-    "downloads.lead": "Minden letölthető mod egy helyen — képekkel, telepítési leírással, szükséges kiegészítőkkel és külön letöltési gombbal.",
+    "downloads.kicker": "GTA V kiegészítők — Legacy és Enhanced", "downloads.title": "Coffeein GTA V Modok",
+    "downloads.lead": "A Coffeein Mod kiegészítői röviden. A modfájlok a Coffeein Mod telepítőjével érkeznek; részletek és segítség Discordon.",
 
     "mod.kicker": "Interaktív GTA V", "mod.title": "Coffeein Mod",
     "mod.lead": "A nézőid is beleszólnak a GTA V kalandodba.",
@@ -100,9 +100,9 @@ const C = {
     
 
     "train.kicker": "OpenIV pack", "train.title": "Fast Train Tracks",
-    "train.lead": "Feloldja a GTA beépített vonatsebesség-korlátját — a Train módban ez kell a komoly tempóhoz.",
+    "train.lead": "Vonatsebesség-korlát feloldása és sárga Freight2 mozdony — a Train módban ez adja a komoly tempót.",
     "train.tag": ".oiv", "train.name": "Mi ez?",
-    "train.body": "A FastTrainTracks.oiv a traintracks.xml-t cseréli az update.rpf / common.rpf alatt (az xml az OIV-ban van, külön nem kell). OpenIV-vel, mods folderbe telepítve a vonat már nem akad el ~100 km/h körül.",
+    "train.body": "Legacy: a FastTrainTracks.oiv és a Freight2.oiv OpenIV-vel, a mods folderbe telepíthető. Enhanced: a Coffeein Mod telepítő Vonatok opciója közvetlenül beállítja a vonatokat, külön OIV-kattintgatás nélkül.",
     "train.bullets": [
       "Csak a .oiv kell — xml nincs külön",
       "Coffeein Mod / Train módhoz ajánlott",
@@ -110,7 +110,7 @@ const C = {
       "Egyszeri telepítés"
     ],
     "train.download": "FastTrainTracks.oiv letöltése",
-    "train.hint": "OpenIV nélkül nem települ. Story mode, singleplayer.",
+    "train.hint": "Legacy: OpenIV szükséges. Enhanced: a telepítő kezeli. Csak Story Mode / singleplayer.",
     "train.steps.tag": "Telepítés", "train.steps.title": "Hogyan",
     "train.steps": [
       "Telepítsd az OpenIV-t (és a mods folder támogatást)",
@@ -120,59 +120,29 @@ const C = {
       "Confirm Install, indítsd a játékot"
     ],
     "wheelmod.kicker": "Ingyenes script mod", "wheelmod.title": "Weapon Wheel Overhaul",
-    "wheelmod.lead": "Gyors, letisztult GTA V fegyverkerék 101 pontos fegyverikonnal.",
-    "wheelmod.tag": "DLL + INI", "wheelmod.name": "Gyors és pontos",
-    "wheelmod.body": "A GTA V Legacy Story Mode fegyverválasztójának könnyű átdolgozása. Minden támogatott fegyver saját képet kap, a felület kevesebbet takar a játékból, a háttérelmosás pedig alapból ki van kapcsolva.",
-    "wheelmod.bullets": [
-      "101 fegyverhez 101 külön, pontos ikon",
-      "Nagyobb, rendezett kártyák és teljesen nyitott középső rész",
-      "Nincs képkockánkénti ikonkeresés vagy szögszámítás",
-      "Görgő lenyomása vagy Tab; görgetés a kategórián belül"
-    ],
+    "wheelmod.lead": "Gyors, letisztult GTA V fegyverkerék 101 pontos fegyverikonnal — Legacy és Enhanced kiadáshoz is.",
+    "wheelmod.tag": "Legacy + Enhanced", "wheelmod.name": "Gyors és pontos",
+    "wheelmod.body": "A Story Mode fegyverválasztójának könnyű átdolgozása, külön Legacy és Enhanced builddel. Minden támogatott fegyver saját képet kap, a felület kevesebbet takar, és nyitott menüben F10-zel ki-be kapcsolható a rendőrség.",
+    "wheelmod.bullets": ["101 saját fegyverikon", "Legacy és Enhanced változat ugyanabból a forrásból", "Rendőrség BE/KI kapcsoló (F10)", "Háttérelmosás alapból kikapcsolva"],
     "wheelmod.download": "Weapon Wheel Overhaul letöltése",
-    "wheelmod.hint": "GTA V Legacy Story Mode. Külön kell: Script Hook V + SHVDN Nightly.",
+    "wheelmod.hint": "Story Mode. Közvetlenül letölthető (Legacy v2.53); az Enhanced build a Coffeein Mod telepítőjében. Kell hozzá: Script Hook V + ScriptHookVDotNet.",
     "wheelmod.req.tag": "Setup", "wheelmod.req.title": "Szükséges",
-    "wheelmod.reqs": [
-      "GTA V Legacy Story Mode",
-      "Script Hook V (Alexander Blade)",
-      "ScriptHookVDotNet Nightly",
-      "scripts mappa a GTA V gyökerében"
-    ],
+    "wheelmod.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "wheelmod.steps.kicker": "Telepítés",
-    "wheelmod.steps": [
-      "Zárd be a GTA V-öt",
-      "Telepítsd a Script Hook V-t és az SHVDN Nightly-t a GTA gyökerébe",
-      "A ZIP-ből másold a DLL és INI fájlt a scripts mappába",
-      "Indítsd el a Story Mode-ot",
-      "Nyitás: görgő lenyomása vagy Tab"
-    ],
+    "wheelmod.steps": ["Zárd be a GTA V-öt", "Telepítsd a Script Hook V-t és az SHVDN Nightly-t a GTA gyökerébe", "A ZIP-ből másold a DLL és INI fájlt a scripts mappába", "Indítsd el a Story Mode-ot", "Nyitás: görgő lenyomása vagy Tab"],
     "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
-    "dis.lead": "GTA 5 singleplayer gore / dismemberment — csak ami a működéshez kell (nem a teljes projekt).",
-    "dis.tag": "ASI + script", "dis.name": "Mi van a zipben",
-    "dis.body": "Csak a mod fájljai: tuned ASI, scripts (dll + cfg), DLC .rpf. SHVDN Nightly és Script Hook V külön (link lent). Forráskód nincs.",
-    "dis.bullets": [
-      "DismembermentASI.asi",
-      "scripts/Dismemberment.dll + toml/cfg",
-      "mods/.../dismemberment/dlc.rpf"
-    ],
+    "dis.lead": "Singleplayer darabolós (gore / dismemberment) mod — Legacy és most már Enhanced kiadáson is.",
+    "dis.tag": "Legacy + Enhanced", "dis.name": "Mit tud?",
+    "dis.body": "Valós testrész-leválasztás lövésre, közelharcra és szuperképességekre, saját DLC-modellekkel. Az Enhanced változat külön, Gen9-re igazított rajzolással készült (Enhanced 1.0.1158.16).",
+    "dis.bullets": ["Legacy és Enhanced build", "Saját, Gen9-re alakított testrész-modellek", "Fegyverenként állítható viselkedés", "Együttműködik a Coffeein Mod harci képességeivel"],
     "dis.download": "Zip letöltése",
-    "dis.hint": "Külön kell: Script Hook V + SHVDN Nightly. OpenIV: dlclist.xml → dismemberment.",
+    "dis.hint": "Story Mode / singleplayer. Az Enhanced változat még játékbeli tesztelés alatt áll.",
     "dis.req.tag": "Setup", "dis.req.title": "Szükséges",
-    "dis.reqs": [
-      "Script Hook V (Alexander Blade)",
-      "SHVDN Nightly",
-      "GTA 5 Legacy story mode",
-      "OpenIV mods folder ajánlott"
-    ],
+    "dis.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "dis.steps.kicker": "Telepítés",
-    "dis.steps": [
-      "Script Hook V + SHVDN Nightly a GTA gyökérbe",
-      "Zip tartalmát másold a GTA V gyökérbe",
-      "OpenIV: dlclist.xml → dlcpacks:\\dismemberment\\",
-      "Story mode indítás"
-    ],
-    "soon.kicker": "Release", "soon.title": "Letöltés később",
-    "soon.body": "A Coffeein Mod telepítője és a részletes útmutatók hamarosan itt lesznek. Addig Discordon a sneak peek és a setup segítség.",
+    "dis.steps": ["Script Hook V + SHVDN Nightly a GTA gyökérbe", "Zip tartalmát másold a GTA V gyökérbe", "OpenIV: dlclist.xml → dlcpacks:\\dismemberment\\", "Story mode indítás"],
+    "soon.kicker": "Release", "soon.title": "Új: Enhanced támogatás",
+    "soon.body": "A Coffeein Mod telepítője már GTA V Legacy és Enhanced kiadásra is telepít: külön Enhanced fegyvermenü, darabolós mod, vonatbeállítás és PoolManagerEnhanced (eseménypool 950 → 1900). Az Enhanced játékbeli működése még tesztelés alatt áll. GTA Online nem támogatott.",
 
     "community.kicker": "Kapcsolat", "community.title": "Discord és YouTube",
     "community.body": "Build, bugreport, live setup — Discord. Showcase és telepítés — YouTube.",
@@ -187,8 +157,8 @@ const C = {
     "hero.lead": "Chaos, ramp challenge, train survival, and viewer attacks in one GTA V mod pack. Your audience can help, hinder, and throw unexpected turns into the live show.",
     "hero.cta": "Explore the modes", "hero.watch": "Watch it run", "hero.discord": "Discord", "hero.youtube": "YouTube",
 
-    "downloads.kicker": "Downloadable GTA V add-ons", "downloads.title": "Coffeein GTA V Mods",
-    "downloads.lead": "All downloadable mods in one place — with images, installation instructions, requirements, and a dedicated download button for each release.",
+    "downloads.kicker": "GTA V add-ons — Legacy and Enhanced", "downloads.title": "Coffeein GTA V Mods",
+    "downloads.lead": "A quick look at Coffeein Mod add-ons. Mod files ship with the Coffeein Mod installer; details and help on Discord.",
 
     "mod.kicker": "Interactive GTA V", "mod.title": "Coffeein Mod",
     "mod.lead": "Your viewers get a say in your GTA V run.",
@@ -282,9 +252,9 @@ const C = {
     
 
     "train.kicker": "OpenIV pack", "train.title": "Fast Train Tracks",
-    "train.lead": "Unlocks GTA’s built-in train speed cap — needed for serious Train mode pace.",
+    "train.lead": "Unlocks the train speed cap and adds the yellow Freight2 locomotive — the pace behind Train mode.",
     "train.tag": ".oiv", "train.name": "What it is",
-    "train.body": "FastTrainTracks.oiv replaces traintracks.xml inside update.rpf / common.rpf (XML is inside the OIV — no separate file). Install with OpenIV into the mods folder so trains are no longer stuck around ~100 km/h.",
+    "train.body": "Legacy: install FastTrainTracks.oiv and Freight2.oiv with OpenIV into the mods folder. Enhanced: the Coffeein Mod installer's Trains option configures trains directly, no OIV needed.",
     "train.bullets": [
       "Only the .oiv — no separate XML",
       "Recommended for Coffeein Mod / Train mode",
@@ -292,7 +262,7 @@ const C = {
       "One-time install"
     ],
     "train.download": "Download FastTrainTracks.oiv",
-    "train.hint": "Needs OpenIV. Story mode, singleplayer.",
+    "train.hint": "Legacy: needs OpenIV. Enhanced: handled by the installer. Story Mode / singleplayer only.",
     "train.steps.tag": "Install", "train.steps.title": "How to",
     "train.steps": [
       "Install OpenIV (with mods folder support)",
@@ -302,59 +272,29 @@ const C = {
       "Confirm Install, launch the game"
     ],
     "wheelmod.kicker": "Free script mod", "wheelmod.title": "Weapon Wheel Overhaul",
-    "wheelmod.lead": "A fast, clean GTA V weapon wheel with 101 accurate weapon icons.",
-    "wheelmod.tag": "DLL + INI", "wheelmod.name": "Fast and accurate",
-    "wheelmod.body": "A lightweight replacement for the GTA V Legacy Story Mode weapon selector. Every supported weapon gets its own image, the interface covers less of the game, and background blur is disabled by default.",
-    "wheelmod.bullets": [
-      "101 distinct, accurate icons for 101 weapons",
-      "Larger organized cards and a completely open center",
-      "No per-frame icon lookup or wheel-angle calculation",
-      "Middle mouse or Tab; scroll within the selected category"
-    ],
+    "wheelmod.lead": "A fast, clean GTA V weapon wheel with 101 accurate icons — for both Legacy and Enhanced.",
+    "wheelmod.tag": "Legacy + Enhanced", "wheelmod.name": "Fast and accurate",
+    "wheelmod.body": "A lightweight Story Mode weapon selector with separate Legacy and Enhanced builds. Every supported weapon has its own image, the UI covers less of the game, and F10 toggles police while the menu is open.",
+    "wheelmod.bullets": ["101 custom weapon icons", "Legacy and Enhanced builds from one source", "Police ON/OFF toggle (F10)", "Background blur off by default"],
     "wheelmod.download": "Download Weapon Wheel Overhaul",
-    "wheelmod.hint": "GTA V Legacy Story Mode. Also required: Script Hook V + SHVDN Nightly.",
+    "wheelmod.hint": "Story Mode. Direct download (Legacy v2.53); the Enhanced build ships with the Coffeein Mod installer. Requires Script Hook V + ScriptHookVDotNet.",
     "wheelmod.req.tag": "Setup", "wheelmod.req.title": "Requirements",
-    "wheelmod.reqs": [
-      "GTA V Legacy Story Mode",
-      "Script Hook V by Alexander Blade",
-      "ScriptHookVDotNet Nightly",
-      "A scripts folder in the GTA V root"
-    ],
+    "wheelmod.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "wheelmod.steps.kicker": "Installation",
-    "wheelmod.steps": [
-      "Close GTA V",
-      "Install Script Hook V and SHVDN Nightly into the GTA root",
-      "Copy the DLL and INI from the ZIP into the scripts folder",
-      "Launch Story Mode",
-      "Open with middle mouse or Tab"
-    ],
+    "wheelmod.steps": ["Close GTA V", "Install Script Hook V and SHVDN Nightly into the GTA root", "Copy the DLL and INI from the ZIP into the scripts folder", "Launch Story Mode", "Open with middle mouse or Tab"],
     "dis.kicker": "Runtime pack", "dis.title": "Dismemberment",
-    "dis.lead": "GTA 5 singleplayer gore / dismemberment — only files needed to run (not the full project).",
-    "dis.tag": "ASI + script", "dis.name": "What's in the zip",
-    "dis.body": "Mod files only: tuned ASI, scripts (dll + cfg), DLC .rpf. SHVDN Nightly and Script Hook V are separate (links below). No source.",
-    "dis.bullets": [
-      "DismembermentASI.asi",
-      "scripts/Dismemberment.dll + toml/cfg",
-      "mods/.../dismemberment/dlc.rpf"
-    ],
+    "dis.lead": "Singleplayer dismemberment mod — on Legacy and now on Enhanced too.",
+    "dis.tag": "Legacy + Enhanced", "dis.name": "What it does",
+    "dis.body": "Limb separation from gunfire, melee and superpowers, with custom DLC models. The Enhanced version uses a separate Gen9-adapted renderer path (Enhanced 1.0.1158.16).",
+    "dis.bullets": ["Legacy and Enhanced builds", "Custom Gen9-converted body-part models", "Per-weapon behaviour", "Works with Coffeein Mod combat powers"],
     "dis.download": "Download zip",
-    "dis.hint": "Also need: Script Hook V + SHVDN Nightly. OpenIV: add dismemberment to dlclist.xml.",
+    "dis.hint": "Story Mode / singleplayer. The Enhanced version is still being tested in-game.",
     "dis.req.tag": "Setup", "dis.req.title": "Requirements",
-    "dis.reqs": [
-      "Script Hook V (Alexander Blade)",
-      "SHVDN Nightly",
-      "GTA 5 Legacy story mode",
-      "OpenIV mods folder recommended"
-    ],
+    "dis.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "dis.steps.kicker": "Install",
-    "dis.steps": [
-      "Script Hook V + SHVDN Nightly into GTA root",
-      "Copy zip contents into GTA V root",
-      "OpenIV: dlclist.xml → add dlcpacks:\\dismemberment\\",
-      "Launch story mode"
-    ],
-    "soon.kicker": "Release", "soon.title": "Downloads later",
-    "soon.body": "The Coffeein Mod installer and full guides will land here soon. Until then — Discord for sneak peeks and setup help.",
+    "dis.steps": ["Script Hook V + SHVDN Nightly into GTA root", "Copy zip contents into GTA V root", "OpenIV: dlclist.xml → add dlcpacks:\\dismemberment\\", "Launch story mode"],
+    "soon.kicker": "Release", "soon.title": "New: Enhanced support",
+    "soon.body": "The Coffeein Mod installer now targets both GTA V Legacy and Enhanced: separate Enhanced weapon wheel, dismemberment, train setup and PoolManagerEnhanced (event pool 950 → 1900). Enhanced in-game behaviour is still being tested. GTA Online is not supported.",
 
     "community.kicker": "Contact", "community.title": "Discord and YouTube",
     "community.body": "Builds, bugs, live setup — Discord. Showcase and install — YouTube.",

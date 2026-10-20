@@ -475,3 +475,12 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
   color: var(--subtle);
   font-size: 0.78rem;
 }
+
+/* Download gate (honor-based) */
+.dl-gate { margin-top: 1.5rem; text-align: center; }
+.dl-gate .row { justify-content: center; gap: .7rem; flex-wrap: wrap; margin: .9rem 0; }
+.dl-gate-status { color: var(--subtle); font-size: .9rem; }
+#dl-gate .btn.done { border-color: #3ddc84; color: #3ddc84; }
+#dl-gate .btn.done::before { content: "✓ "; }
+.gated-dl.locked { opacity: .45; cursor: not-allowed; filter: grayscale(.6); position: relative; }
+.gated-dl.locked::after { content: attr(data-lock); margin-left: .5em; font-size: .85em; }
