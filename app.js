@@ -513,7 +513,12 @@ paint();
     if (subIds.includes(id)) { show("downloads", null); if (subBar) subBar.scrollIntoView({ block: "start" }); return; }
     show(tab || "home", tab ? id : null);
   };
-  window.addEventListener("hashchange", route);
+  // 2026: animate tab / sub-tab switches with the View Transitions API (progressive enhancement).
+  const calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.addEventListener("hashchange", () => {
+    if (document.startViewTransition && !calm) document.startViewTransition(route);
+    else route();
+  });
   // Locked download click: make sure the gate's tab is visible before gate.js scrolls to it.
   document.addEventListener("click", (e) => {
     if (e.target.closest && e.target.closest(".gated-dl")) {
