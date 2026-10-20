@@ -528,3 +528,31 @@ paint();
   }, true);
   route();
 })();
+
+// v2: cursor-follow spotlight on cards (pointer devices only; CSS reads --mx/--my).
+(function spotlight() {
+  if (!matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  document.addEventListener("pointermove", (e) => {
+    const c = e.target.closest && e.target.closest(".glass:not(.nav), .shot");
+    if (!c) return;
+    const r = c.getBoundingClientRect();
+    c.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    c.style.setProperty("--my", (e.clientY - r.top) + "px");
+  }, { passive: true });
+})();
+
+// v2: sub-tab bar scroll hint — mark which edges still have hidden tabs.
+(function subtabHint() {
+  const bar = document.querySelector(".subtabs");
+  if (!bar) return;
+  const upd = () => {
+    const max = bar.scrollWidth - bar.clientWidth;
+    bar.classList.toggle("more-r", bar.scrollLeft < max - 2);
+    bar.classList.toggle("more-l", bar.scrollLeft > 2);
+  };
+  bar.addEventListener("scroll", upd, { passive: true });
+  addEventListener("resize", upd);
+  addEventListener("hashchange", () => setTimeout(upd, 50));
+  new ResizeObserver(upd).observe(bar);
+  upd();
+})();
