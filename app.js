@@ -101,7 +101,7 @@ const C = {
 
     "train.kicker": "OpenIV pack", "train.title": "Fast Train Tracks",
     "train.lead": "Vonatsebesség-korlát feloldása és sárga Freight2 mozdony — a Train módban ez adja a komoly tempót.",
-    "train.tag": ".oiv", "train.name": "Mi ez?",
+    "train.tag": ".oiv (ZIP)", "train.name": "Mi ez?",
     "train.body": "Legacy: a FastTrainTracks.oiv és a Freight2.oiv OpenIV-vel, a mods folderbe telepíthető. Enhanced: a Coffeein Mod telepítő Vonatok opciója közvetlenül beállítja a vonatokat, külön OIV-kattintgatás nélkül.",
     "train.bullets": [
       "Csak a .oiv kell — xml nincs külön",
@@ -109,12 +109,12 @@ const C = {
       "OpenIV + mods folder (ne game folder)",
       "Egyszeri telepítés"
     ],
-    "train.download": "FastTrainTracks.oiv letöltése",
-    "train.hint": "Legacy: OpenIV szükséges. Enhanced: a telepítő kezeli. Csak Story Mode / singleplayer.",
+    "train.download": "FastTrainTracks (ZIP) letöltése",
+    "train.hint": "Legacy: OpenIV szükséges. Enhanced: a telepítő kezeli. Csak Story Mode / singleplayer. A ZIP jelszavas – a jelszót a Discord-szerverünkön találod. Kicsomagoláshoz 7-Zip vagy WinRAR kell.",
     "train.steps.tag": "Telepítés", "train.steps.title": "Hogyan",
     "train.steps": [
       "Telepítsd az OpenIV-t (és a mods folder támogatást)",
-      "Töltsd le a FastTrainTracks.oiv-ot",
+      "Töltsd le a ZIP-et, és csomagold ki a FastTrainTracks.oiv-ot (7-Zip / WinRAR)",
       "Dupla katt / OpenIV → Install",
       "Válaszd a mods folder opciót",
       "Confirm Install, indítsd a játékot"
@@ -125,7 +125,7 @@ const C = {
     "wheelmod.body": "A Story Mode fegyverválasztójának könnyű átdolgozása, külön Legacy és Enhanced builddel. Minden támogatott fegyver saját képet kap, a felület kevesebbet takar, és nyitott menüben F10-zel ki-be kapcsolható a rendőrség.",
     "wheelmod.bullets": ["101 saját fegyverikon", "Legacy és Enhanced változat ugyanabból a forrásból", "Rendőrség BE/KI kapcsoló (F10)", "Háttérelmosás alapból kikapcsolva"],
     "wheelmod.download": "Weapon Wheel Overhaul letöltése",
-    "wheelmod.hint": "Story Mode. Közvetlenül letölthető (Legacy v2.53); az Enhanced build a Coffeein Mod telepítőjében. Kell hozzá: Script Hook V + ScriptHookVDotNet.",
+    "wheelmod.hint": "Story Mode. Közvetlenül letölthető (Legacy v2.53); az Enhanced build a Coffeein Mod telepítőjében. Kell hozzá: Script Hook V + ScriptHookVDotNet. A ZIP jelszavas – a jelszót a Discord-szerverünkön találod. Kicsomagoláshoz 7-Zip vagy WinRAR kell.",
     "wheelmod.req.tag": "Setup", "wheelmod.req.title": "Szükséges",
     "wheelmod.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "wheelmod.steps.kicker": "Telepítés",
@@ -136,7 +136,7 @@ const C = {
     "dis.body": "Valós testrész-leválasztás lövésre, közelharcra és szuperképességekre, saját DLC-modellekkel. Az Enhanced változat külön, Gen9-re igazított rajzolással készült (Enhanced 1.0.1158.16).",
     "dis.bullets": ["Legacy és Enhanced build", "Saját, Gen9-re alakított testrész-modellek", "Fegyverenként állítható viselkedés", "Együttműködik a Coffeein Mod harci képességeivel"],
     "dis.download": "Zip letöltése",
-    "dis.hint": "Story Mode / singleplayer. Az Enhanced változat még játékbeli tesztelés alatt áll.",
+    "dis.hint": "Story Mode / singleplayer. Az Enhanced változat még játékbeli tesztelés alatt áll. A ZIP jelszavas – a jelszót a Discord-szerverünkön találod. Kicsomagoláshoz 7-Zip vagy WinRAR kell.",
     "dis.req.tag": "Setup", "dis.req.title": "Szükséges",
     "dis.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "dis.steps.kicker": "Telepítés",
@@ -253,7 +253,7 @@ const C = {
 
     "train.kicker": "OpenIV pack", "train.title": "Fast Train Tracks",
     "train.lead": "Unlocks the train speed cap and adds the yellow Freight2 locomotive — the pace behind Train mode.",
-    "train.tag": ".oiv", "train.name": "What it is",
+    "train.tag": ".oiv (ZIP)", "train.name": "What it is",
     "train.body": "Legacy: install FastTrainTracks.oiv and Freight2.oiv with OpenIV into the mods folder. Enhanced: the Coffeein Mod installer's Trains option configures trains directly, no OIV needed.",
     "train.bullets": [
       "Only the .oiv — no separate XML",
@@ -261,12 +261,12 @@ const C = {
       "OpenIV + mods folder (not game folder)",
       "One-time install"
     ],
-    "train.download": "Download FastTrainTracks.oiv",
-    "train.hint": "Legacy: needs OpenIV. Enhanced: handled by the installer. Story Mode / singleplayer only.",
+    "train.download": "Download FastTrainTracks (ZIP)",
+    "train.hint": "Legacy: needs OpenIV. Enhanced: handled by the installer. Story Mode / singleplayer only. The ZIP is password-protected – find the password on our Discord server. Extract it with 7-Zip or WinRAR.",
     "train.steps.tag": "Install", "train.steps.title": "How to",
     "train.steps": [
       "Install OpenIV (with mods folder support)",
-      "Download FastTrainTracks.oiv",
+      "Download the ZIP and extract FastTrainTracks.oiv (7-Zip / WinRAR)",
       "Double-click / OpenIV → Install",
       "Choose the mods folder option",
       "Confirm Install, launch the game"
@@ -277,7 +277,7 @@ const C = {
     "wheelmod.body": "A lightweight Story Mode weapon selector with separate Legacy and Enhanced builds. Every supported weapon has its own image, the UI covers less of the game, and F10 toggles police while the menu is open.",
     "wheelmod.bullets": ["101 custom weapon icons", "Legacy and Enhanced builds from one source", "Police ON/OFF toggle (F10)", "Background blur off by default"],
     "wheelmod.download": "Download Weapon Wheel Overhaul",
-    "wheelmod.hint": "Story Mode. Direct download (Legacy v2.53); the Enhanced build ships with the Coffeein Mod installer. Requires Script Hook V + ScriptHookVDotNet.",
+    "wheelmod.hint": "Story Mode. Direct download (Legacy v2.53); the Enhanced build ships with the Coffeein Mod installer. Requires Script Hook V + ScriptHookVDotNet. The ZIP is password-protected – find the password on our Discord server. Extract it with 7-Zip or WinRAR.",
     "wheelmod.req.tag": "Setup", "wheelmod.req.title": "Requirements",
     "wheelmod.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "wheelmod.steps.kicker": "Installation",
@@ -288,7 +288,7 @@ const C = {
     "dis.body": "Limb separation from gunfire, melee and superpowers, with custom DLC models. The Enhanced version uses a separate Gen9-adapted renderer path (Enhanced 1.0.1158.16).",
     "dis.bullets": ["Legacy and Enhanced builds", "Custom Gen9-converted body-part models", "Per-weapon behaviour", "Works with Coffeein Mod combat powers"],
     "dis.download": "Download zip",
-    "dis.hint": "Story Mode / singleplayer. The Enhanced version is still being tested in-game.",
+    "dis.hint": "Story Mode / singleplayer. The Enhanced version is still being tested in-game. The ZIP is password-protected – find the password on our Discord server. Extract it with 7-Zip or WinRAR.",
     "dis.req.tag": "Setup", "dis.req.title": "Requirements",
     "dis.reqs": ["Script Hook V", "ScriptHookVDotNet (Legacy: nightly, Enhanced: SHVDNE)", "GTA V Story Mode"],
     "dis.steps.kicker": "Install",
