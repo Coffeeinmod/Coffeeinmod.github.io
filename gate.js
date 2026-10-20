@@ -3,10 +3,10 @@
   var T = {
     hu: { text: "A letöltéshez iratkozz fel YouTube-on és csatlakozz a Discordhoz (mindkét gombra kattints).",
           yt: "Feliratkozás YouTube-on", dc: "Csatlakozás Discordhoz",
-          locked: "🔒 Zárolva", status0: "Még hiányzik: ", ok: "✅ Köszönjük! A letöltések elérhetők." },
+          locked: "🔒 Zárolva", status0: "Még hiányzik: ", ok: "✅ Köszönjük! A letöltések elérhetők.", qryt: "Olvasd be a YouTube-csatornához", qrdc: "Olvasd be a Discordhoz" },
     en: { text: "To download, subscribe on YouTube and join the Discord (click both buttons).",
           yt: "Subscribe on YouTube", dc: "Join Discord",
-          locked: "🔒 Locked", status0: "Still missing: ", ok: "✅ Thanks! Downloads are unlocked." }
+          locked: "🔒 Locked", status0: "Still missing: ", ok: "✅ Thanks! Downloads are unlocked.", qryt: "Scan for the YouTube channel", qrdc: "Scan to join the Discord" }
   };
   function st() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
   function save(s) { localStorage.setItem(KEY, JSON.stringify(s)); }
