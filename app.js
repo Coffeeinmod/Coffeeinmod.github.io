@@ -440,26 +440,51 @@ paint();
   }, { passive: true });
 })();
 
-(function navSpy() {
-  const ids = ["mod", "effects", "tok", "studio", "downloads", "community"];
-  const links = () => [...document.querySelectorAll("nav.links a, .mob-nav a")];
-  const setActive = (id) => {
-    links().forEach((a) => {
-      a.classList.toggle("is-active", a.getAttribute("href") === "#" + id);
-    });
-  };
-  const io = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter((e) => e.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-    if (visible[0]) setActive(visible[0].target.id);
-  }, { rootMargin: "-28% 0px -55% 0px", threshold: [0.1, 0.35, 0.6] });
-  ids.forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) io.observe(el);
+(function tabs() {
+  const tabIds = ["home", "mod", "effects", "tok", "studio", "downloads", "community"];
+  const main = document.querySelector("main");
+  if (!main) return;
+  // Assign every top-level block of <main> to a tab.
+  let cur = "home";
+  [...main.children].forEach((el) => {
+    if (el.id && tabIds.includes(el.id)) cur = el.id;
+    if (el.id === "traintracks" || el.id === "weaponwheel" || el.id === "dismember" || el.id === "soon" || el.id === "dl-gate") cur = "downloads";
+    if (el.id === "community") cur = "community";
+    el.dataset.tab = cur;
   });
-  links().forEach((a) => a.addEventListener("click", () => {
-    const id = (a.getAttribute("href") || "").slice(1);
-    if (id) setActive(id);
-  }));
+  const anchorTab = (id) => {
+    if (!id || id === "top") return "home";
+    if (tabIds.includes(id)) return id;
+    const el = document.getElementById(id);
+    const blk = el && el.closest("main > [data-tab]");
+    return blk ? blk.dataset.tab : null;
+  };
+  const links = () => [...document.querySelectorAll("nav.links a, .mob-nav a")];
+  const show = (tab, target) => {
+    main.querySelectorAll(":scope > [data-tab]").forEach((el) => {
+      el.hidden = el.dataset.tab !== tab;
+    });
+    links().forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === "#" + tab));
+    const m = document.querySelector(".mob-nav a.is-active");
+    if (m && m.scrollIntoView) m.scrollIntoView({ block: "nearest", inline: "center" });
+    if (target && target !== tab && target !== "top") {
+      const el = document.getElementById(target);
+      if (el) { el.scrollIntoView({ block: "start" }); return; }
+    }
+    window.scrollTo(0, 0);
+  };
+  const route = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const tab = anchorTab(id);
+    show(tab || "home", tab ? id : null);
+  };
+  window.addEventListener("hashchange", route);
+  // Locked download click: make sure the gate's tab is visible before gate.js scrolls to it.
+  document.addEventListener("click", (e) => {
+    if (e.target.closest && e.target.closest(".gated-dl")) {
+      const g = document.getElementById("dl-gate");
+      if (g && g.closest("[data-tab]") && g.closest("[data-tab]").hidden) show(g.closest("[data-tab]").dataset.tab);
+    }
+  }, true);
+  route();
 })();
