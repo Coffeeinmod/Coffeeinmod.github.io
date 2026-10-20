@@ -473,9 +473,44 @@ paint();
     }
     window.scrollTo(0, 0);
   };
+  // Sub-tabs inside Letöltések: one mod at a time.
+  const subIds = ["traintracks", "weaponwheel", "dismember", "soon"].filter((id) => document.getElementById(id));
+  let subBar = null;
+  if (subIds.length) {
+    subBar = document.createElement("div");
+    subBar.className = "wrap subtabs";
+    subBar.setAttribute("role", "tablist");
+    subBar.dataset.tab = "downloads";
+    subIds.forEach((id) => {
+      const sec = document.getElementById(id);
+      const h = sec.querySelector("h2");
+      const b = document.createElement("a");
+      b.href = "#" + id;
+      b.dataset.sub = id;
+      b.setAttribute("role", "tab");
+      const sync = () => { b.textContent = h ? h.textContent : id; };
+      sync();
+      if (h) new MutationObserver(sync).observe(h, { childList: true, characterData: true, subtree: true });
+      subBar.appendChild(b);
+    });
+    const first = document.getElementById(subIds[0]);
+    first.parentNode.insertBefore(subBar, first);
+  }
+  const showSub = (id) => {
+    if (!subIds.includes(id)) id = subIds[0];
+    subIds.forEach((s) => { document.getElementById(s).classList.toggle("sub-hidden", s !== id); });
+    if (subBar) subBar.querySelectorAll("a").forEach((a) => {
+      const on = a.dataset.sub === id;
+      a.classList.toggle("is-active", on);
+      a.setAttribute("aria-selected", on ? "true" : "false");
+      if (on && a.scrollIntoView) a.scrollIntoView({ block: "nearest", inline: "center" });
+    });
+  };
   const route = () => {
     const id = decodeURIComponent(location.hash.slice(1));
     const tab = anchorTab(id);
+    if ((tab || "home") === "downloads") showSub(subIds.includes(id) ? id : null);
+    if (subIds.includes(id)) { show("downloads", null); if (subBar) subBar.scrollIntoView({ block: "start" }); return; }
     show(tab || "home", tab ? id : null);
   };
   window.addEventListener("hashchange", route);

@@ -491,3 +491,10 @@ footer { padding: 2.2rem 0 3rem; color: var(--subtle); font-size: 0.8rem; line-h
 /* Tab-style pages: only the selected block of <main> is visible */
 main > [hidden] { display: none !important; }
 main > [data-tab]:not(.hero):first-child, main > section[data-tab]:not([hidden]) { min-height: 60vh; }
+main > .sub-hidden { display: none !important; }
+.subtabs { display: flex; gap: .5rem; flex-wrap: nowrap; overflow-x: auto; padding-top: 2rem; padding-bottom: .5rem; scroll-margin-top: 6rem; scrollbar-width: none; }
+.subtabs::-webkit-scrollbar { display: none; }
+.subtabs a { flex: 0 0 auto; padding: .55rem 1rem; border-radius: 999px; border: 1px solid rgb(255 106 0 / .35); color: var(--fg); text-decoration: none; font-weight: 600; white-space: nowrap; }
+.subtabs a:hover { background: rgb(255 106 0 / .1); }
+.subtabs a.is-active { background: rgb(255 106 0); color: #070604; border-color: transparent; }
+@media (max-width: 640px) { .subtabs a { padding: .5rem .8rem; font-size: .9rem; } }
