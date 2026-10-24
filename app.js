@@ -349,6 +349,7 @@ const GALLERIES = {
   ],
   tok: [
     ["images/coffeeintok-casino-1050.webp", "CoffeeinTok 1.0.50 Casino beállítások: Látványteszt, Éles teszt és 1328 Casino kártya"],
+    ["images/coffeeintok-avatar-settings.webp", "Reagáló avatar beállítóoldal: állandó megjelenés, ajándékreakció videóval, 16:9 előnézet"],
     ["images/ov-ugurtas.png", "Gift alert"],
     ["images/ov-tiktokobs.png", "TikTokOBS"],
     ["images/ov-topgifters.png", "Top támogatók"],
