@@ -348,6 +348,7 @@ const GALLERIES = {
     ["images/mod-hud-night.jpg", "Streamer vs Chat"]
   ],
   tok: [
+    ["images/coffeeintok-main-1050.webp", "CoffeeinTok 1.0.50 főablak: oldalmenü, beépített böngésző és élő chat"],
     ["images/coffeeintok-casino-1050.webp", "CoffeeinTok 1.0.50 Casino beállítások: Látványteszt, Éles teszt és 1328 Casino kártya"],
     ["images/casino-ov-radar.webp", "Casino overlay: Radar stílus"],
     ["images/casino-ov-telefon.webp", "Casino overlay: Telefon stílus"],
