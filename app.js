@@ -76,6 +76,7 @@ const C = {
       ["Biztonság","Webhook allowlist, DPAPI titkok, HWID-kötött licenc a védett buildben."],
       ["Casino: mire induljon?","A pörgetés indítása közvetlenül a Casino oldalon: ajándékra (konkrét ajándék vagy gyémánttól), lájkszámra vagy pontra (chatparancs, alap !casino) — ugyanazok az Interakciók-szabályok."],
       ["Casino: Esemény teszt","Kamu ajándék / like / pont esemény egy „Teszt” nézőtől: végigmegy a szabályokon, és a játékba is beküldi az akciót. A Látványteszt és az Éles teszt megmaradt."],
+      ["Reagáló avatar","OBS overlay, ami ajándékra, lájkra, chatre, követésre, megosztásra, belépésre, AI-válaszra és felolvasásra (TTS) saját képpel vagy némított videóval reagál. Eseményenként akár 12 változat, 6–15 mp megjelenés; állandó módban események között üresjárati kép/videó látszik."],
       ["Új felület","Letisztult főablak összecsukható csoportokkal, beépített böngésző és négy színtéma (Kávé, Neon kék, Lila, Piros)."]
     ],
 
@@ -236,6 +237,7 @@ const C = {
       ["Safety","Webhook allowlist, DPAPI secrets, HWID-bound license in protected builds."],
       ["Casino: what starts it?","Set the spin trigger right on the Casino page: gift (specific gift or from N diamonds), like count, or points (chat command, default !casino) — same Interactions rules."],
       ["Casino: Event test","Fake gift / like / point event from a “Teszt” viewer: runs through the rules and sends the action into the game. Visual test and Live test are kept."],
+      ["Reacting avatar","OBS overlay that reacts to gifts, likes, chat, follows, shares, joins, AI replies and TTS with your own image or muted video. Up to 12 variants per event, 6–15 s display; in always-on mode an idle image/video shows between events."],
       ["New interface","Clean main window with collapsible groups, built-in browser and four color themes (Coffee, Neon blue, Purple, Red)."]
     ],
 
@@ -346,6 +348,7 @@ const GALLERIES = {
     ["images/mod-hud-night.jpg", "Streamer vs Chat"]
   ],
   tok: [
+    ["images/coffeeintok-casino-1050.webp", "CoffeeinTok 1.0.50 Casino beállítások: Látványteszt, Éles teszt és 1328 Casino kártya"],
     ["images/ov-ugurtas.png", "Gift alert"],
     ["images/ov-tiktokobs.png", "TikTokOBS"],
     ["images/ov-topgifters.png", "Top támogatók"],
