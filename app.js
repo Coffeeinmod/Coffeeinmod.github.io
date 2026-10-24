@@ -63,12 +63,20 @@ const C = {
       "TTS + AI chat beállítások",
       "Licenc / próba védett Setup-ban",
       "KOTH rámpa: jármű/tárgy hullámok, sebességboost",
-      "YouTube zene / lokális lejátszás támogatás"
+      "YouTube zene / lokális lejátszás támogatás",
+      "Új, letisztult főablak: kompakt felső sáv (Csatlakozás, Felvétel, Továbbiak menü)",
+      "Összecsukható csoportok: Overlayek, Interakciók és játék, Hang és zene, Statisztika, Beállítások",
+      "Beépített böngésző: az oldalak a programon belül nyílnak meg",
+      "Színtémák: Kávé, Neon kék, Lila, Piros",
+      "1328 Casino kártya / GTA effekt"
     ],
     "tok.features": [
       ["Ajándék motor","Gift ID elsődleges egyezés — Rose ≠ Rosa. Combo, pause, reconnect."],
       ["Overlay studio","Admin / editor / studio oldalak localhost:5050-en, tokennel védve."],
-      ["Biztonság","Webhook allowlist, DPAPI titkok, HWID-kötött licenc a védett buildben."]
+      ["Biztonság","Webhook allowlist, DPAPI titkok, HWID-kötött licenc a védett buildben."],
+      ["Casino: mire induljon?","A pörgetés indítása közvetlenül a Casino oldalon: ajándékra (konkrét ajándék vagy gyémánttól), lájkszámra vagy pontra (chatparancs, alap !casino) — ugyanazok az Interakciók-szabályok."],
+      ["Casino: Esemény teszt","Kamu ajándék / like / pont esemény egy „Teszt” nézőtől: végigmegy a szabályokon, és a játékba is beküldi az akciót. A Látványteszt és az Éles teszt megmaradt."],
+      ["Új felület","Letisztult főablak összecsukható csoportokkal, beépített böngésző és négy színtéma (Kávé, Neon kék, Lila, Piros)."]
     ],
 
     
@@ -215,12 +223,20 @@ const C = {
       "TTS + AI chat settings",
       "License / trial in the protected Setup",
       "KOTH ramp: vehicle/prop waves, speed boost",
-      "YouTube music / local playback support"
+      "YouTube music / local playback support",
+      "New clean main window: compact top bar (Connect, Record, More menu)",
+      "Collapsible groups: Overlays, Interactions & game, Sound & music, Stats, Settings",
+      "Built-in browser: pages open inside the app",
+      "Color themes: Coffee, Neon blue, Purple, Red",
+      "1328 Casino cards / GTA effects"
     ],
     "tok.features": [
       ["Gift engine","Gift ID first — Rose ≠ Rosa. Combo, pause, reconnect."],
       ["Overlay studio","Admin / editor / studio on localhost:5050, token-gated."],
-      ["Safety","Webhook allowlist, DPAPI secrets, HWID-bound license in protected builds."]
+      ["Safety","Webhook allowlist, DPAPI secrets, HWID-bound license in protected builds."],
+      ["Casino: what starts it?","Set the spin trigger right on the Casino page: gift (specific gift or from N diamonds), like count, or points (chat command, default !casino) — same Interactions rules."],
+      ["Casino: Event test","Fake gift / like / point event from a “Teszt” viewer: runs through the rules and sends the action into the game. Visual test and Live test are kept."],
+      ["New interface","Clean main window with collapsible groups, built-in browser and four color themes (Coffee, Neon blue, Purple, Red)."]
     ],
 
     
