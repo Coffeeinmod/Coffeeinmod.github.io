@@ -817,3 +817,26 @@ footer .visitor-stat strong {
   content: ""; position: absolute; inset: -2rem -2.5rem; z-index: -1; pointer-events: none;
   background: radial-gradient(closest-side, rgb(7 6 4 / .55), transparent);
 }
+
+/* Lapozható galéria + nagyító */
+.gallery.carousel { display: block; position: relative; }
+.car-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; gap: 0; border-radius: 1.1rem; }
+.car-track::-webkit-scrollbar { display: none; }
+.car-slide { flex: 0 0 100%; scroll-snap-align: center; }
+.gallery .car-slide img, .gallery .shot.car-slide img { height: 15rem; max-height: none; width: 100%; object-fit: contain; background: #0b0907; cursor: zoom-in; }
+.car-slide:hover img { transform: none !important; }
+.car-btn { position: absolute; top: 7.5rem; transform: translateY(-50%); width: 2.4rem; height: 2.4rem; border-radius: 999px; border: 0; background: rgb(0 0 0 / .6); color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; z-index: 2; }
+.car-prev { left: .4rem; } .car-next { right: .4rem; }
+.car-dots { display: flex; justify-content: center; gap: .35rem; margin-top: .5rem; flex-wrap: wrap; }
+.car-dots span { width: .5rem; height: .5rem; border-radius: 999px; background: var(--line); cursor: pointer; }
+.car-dots span.on { background: var(--primary); }
+#lightbox { position: fixed; inset: 0; z-index: 9999; background: rgb(0 0 0 / .92); display: none; align-items: center; justify-content: center; overflow: auto; }
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 94vw; max-height: 86vh; object-fit: contain; cursor: zoom-in; }
+#lightbox.zoom { align-items: flex-start; justify-content: flex-start; }
+#lightbox.zoom img { max-width: none; max-height: none; width: 200vw; cursor: zoom-out; }
+#lightbox button { position: fixed; border: 0; background: rgb(255 255 255 / .12); color: #fff; border-radius: 999px; width: 2.8rem; height: 2.8rem; font-size: 1.8rem; cursor: pointer; z-index: 2; }
+.lb-close { top: 1rem; right: 1rem; } .lb-prev { left: 1rem; top: 50%; } .lb-next { right: 1rem; top: 50%; }
+#lightbox.zoom .lb-prev, #lightbox.zoom .lb-next { display: none; }
+.lb-cap { position: fixed; bottom: .6rem; left: 0; right: 0; text-align: center; color: #ddd; font-size: .85rem; margin: 0; }
+@media (max-width: 520px) { .gallery .car-slide img { height: 12rem; } .car-btn { top: 6rem; } }

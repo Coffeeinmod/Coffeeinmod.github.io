@@ -405,14 +405,22 @@ function paint() {
     `<div class="glass feat"><h3 class="display">${title}</h3><p>${body}</p></div>`
   ).join("");
   $("#studio-chips").innerHTML = t["studio.chips"].map((c) => `<span class="chip">${c}</span>`).join("");
-    const shot = (src, alt, i) =>
-    `<figure class="shot glass${i === 0 ? ' shot-hero' : ''}"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`;
-  $("#train-gallery").innerHTML = GALLERIES.train.map(([src, alt], i) => shot(src, alt, i)).join("");
-  $("#wheelmod-gallery").innerHTML = GALLERIES.wheelmod.map(([src, alt], i) => shot(src, alt, i)).join("");
-  $("#dis-gallery").innerHTML = GALLERIES.dis.map(([src, alt], i) => shot(src, alt, i)).join("");
-  $("#studio-gallery").innerHTML = GALLERIES.studio.map(([src, alt], i) => shot(src, alt, i)).join("");
-  $("#mod-gallery").innerHTML = GALLERIES.mod.map(([src, alt], i) => shot(src, alt, i)).join("");
-  $("#tok-gallery").innerHTML = GALLERIES.tok.map(([src, alt], i) => shot(src, alt, i)).join("");
+  const carousel = (id, list) => {
+    const el = $("#" + id);
+    el.innerHTML = `<div class="car-track">${list.map(([src, alt]) =>
+      `<figure class="shot glass car-slide"><img src="${src}" alt="${alt}" loading="lazy" /><figcaption>${alt}</figcaption></figure>`).join("")}</div>` +
+      (list.length > 1 ? `<button class="car-btn car-prev" aria-label="Előző">‹</button><button class="car-btn car-next" aria-label="Következő">›</button><div class="car-dots">${list.map((_, i) => `<span${i ? "" : ' class="on"'}></span>`).join("")}</div>` : "");
+    el.classList.add("carousel");
+    const tr = el.querySelector(".car-track"), dots = el.querySelectorAll(".car-dots span");
+    const idx = () => Math.round(tr.scrollLeft / tr.clientWidth);
+    const go = (i) => tr.scrollTo({ left: Math.max(0, Math.min(list.length - 1, i)) * tr.clientWidth, behavior: "smooth" });
+    el.querySelector(".car-prev")?.addEventListener("click", () => go(idx() - 1));
+    el.querySelector(".car-next")?.addEventListener("click", () => go(idx() + 1));
+    dots.forEach((d, i) => d.addEventListener("click", () => go(i)));
+    tr.addEventListener("scroll", () => { const k = idx(); dots.forEach((d, i) => d.classList.toggle("on", i === k)); }, { passive: true });
+    tr.querySelectorAll("img").forEach((im, i) => im.addEventListener("click", () => openLightbox(list, i)));
+  };
+  ["train", "wheelmod", "dis", "studio", "mod", "tok"].forEach((k) => carousel(k + "-gallery", GALLERIES[k]));
 }
 
 $("#hu").onclick = () => { lang = "hu"; localStorage.setItem("coffeein-lang", lang); paint(); };
@@ -581,3 +589,29 @@ paint();
   new ResizeObserver(upd).observe(bar);
   upd();
 })();
+
+function openLightbox(list, i) {
+  let lb = document.getElementById("lightbox");
+  if (!lb) {
+    lb = document.createElement("div"); lb.id = "lightbox";
+    lb.innerHTML = '<button class="lb-close" aria-label="Bezár">×</button><button class="lb-prev" aria-label="Előző">‹</button><img alt="" /><button class="lb-next" aria-label="Következő">›</button><p class="lb-cap"></p>';
+    document.body.appendChild(lb);
+    lb.addEventListener("click", (e) => { if (e.target === lb || e.target.classList.contains("lb-close")) lb.classList.remove("open"); });
+    lb.querySelector("img").addEventListener("click", (e) => { e.stopPropagation(); lb.classList.toggle("zoom"); });
+    document.addEventListener("keydown", (e) => {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") lb.classList.remove("open");
+      if (e.key === "ArrowLeft") lb._go(-1);
+      if (e.key === "ArrowRight") lb._go(1);
+    });
+    let sx = null;
+    lb.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", (e) => { if (sx === null || lb.classList.contains("zoom")) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) lb._go(dx < 0 ? 1 : -1); sx = null; });
+    lb.querySelector(".lb-prev").addEventListener("click", (e) => { e.stopPropagation(); lb._go(-1); });
+    lb.querySelector(".lb-next").addEventListener("click", (e) => { e.stopPropagation(); lb._go(1); });
+  }
+  lb._list = list; lb._i = i;
+  lb._show = () => { const [src, alt] = lb._list[lb._i]; const im = lb.querySelector("img"); im.src = src; im.alt = alt; lb.querySelector(".lb-cap").textContent = `${alt} (${lb._i + 1}/${lb._list.length})`; lb.classList.remove("zoom"); };
+  lb._go = (d) => { lb._i = (lb._i + d + lb._list.length) % lb._list.length; lb._show(); };
+  lb._show(); lb.classList.add("open");
+}
